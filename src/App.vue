@@ -4,26 +4,18 @@ import { RouterView } from 'vue-router';
 
 <template>
   <header class="fixed top-0 left-0 right-0 z-50 px-8 pt-5">
-    <nav
-      class="flex items-center justify-between text-black bg-white dark:bg-darkBackground dark:text-darkText"
-    >
-      <a href="/" class="text-xl font-medium" data-discover="true" aria-current="page">Rizqi MKS</a>
+    <nav class="flex items-center justify-between">
+      <a href="/" class="text-lg font-medium" data-discover="true" aria-current="page">MKS.proc</a>
       <div class="flex items-center gap-2">
         <div>
-          <select id="theme-selector" @change="changeTheme" :value="currentTheme">
+          <select id="theme-selector" class="text-sm border-r-4 border-rose-500">
             <option value="light">Light</option>
             <option value="warm">Warm</option>
             <option value="dark">Dark</option>
           </select>
         </div>
         <button>
-          <svg
-            width="24px"
-            height="24px"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
@@ -38,37 +30,47 @@ import { RouterView } from 'vue-router';
 
   <RouterView />
 
-  <footer class="fixed left-0 right-0 z-50 bottom-6 bg-cyan-500">
-    <div class="flex justify-between">
-      <p>Made with by MKS</p>
-      <ul class="flex gap-4">
-        <li>a</li>
-        <li>b</li>
-        <li>c</li>
-        <li>d</li>
+  <footer class="fixed left-0 right-0 z-50 px-8 pt-5 bottom-6">
+    <div class="flex items-center justify-between">
+      <p class="text-sm">
+        Made with
+        <font-awesome-icon :icon="['fas', 'heart']" class="duration-150 ease-in-out opacity-85" />
+        by MKS
+      </p>
+      <ul class="flex gap-3 text-sm">
+        <li>
+          <a href="https://www.facebook.com/rizqi.mks.22" target="_blank" rel="noreferrer noopener">
+            <font-awesome-icon
+              :icon="['fab', 'facebook']"
+              class="duration-100 ease-in-out opacity-75 hover:opacity-85"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/rizqi.mks.22" target="_blank" rel="noreferrer noopener">
+            <font-awesome-icon
+              :icon="['fab', 'github']"
+              class="duration-100 ease-in-out opacity-75 hover:opacity-85"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/rizqi.mks.22" target="_blank" rel="noreferrer noopener">
+            <font-awesome-icon
+              :icon="['fab', 'instagram']"
+              class="duration-100 ease-in-out opacity-75 hover:opacity-85"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/rizqi.mks.22" target="_blank" rel="noreferrer noopener">
+            <font-awesome-icon
+              :icon="['fab', 'linkedin']"
+              class="duration-100 ease-in-out opacity-75 hover:opacity-85"
+            />
+          </a>
+        </li>
       </ul>
     </div>
   </footer>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      currentTheme: localStorage.getItem('theme') || 'light',
-    };
-  },
-  methods: {
-    changeTheme(event) {
-      const selectedTheme = event.target.value;
-      this.$setTheme(selectedTheme);
-      this.currentTheme = selectedTheme;
-    },
-  },
-  watch: {
-    currentTheme(newTheme) {
-      localStorage.setItem('theme', newTheme);
-    },
-  },
-};
-</script>

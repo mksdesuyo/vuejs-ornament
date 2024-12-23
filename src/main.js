@@ -4,16 +4,17 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 
+// FontAwesome stuff
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
+library.add(faHeart, faFacebook, faGithub, faInstagram, faLinkedin);
+
 const app = createApp(App);
 
-const savedTheme = localStorage.getItem('theme') || 'light';
-document.body.classList.add(savedTheme);
-
-app.config.globalProperties.$setTheme = (theme) => {
-  document.body.classList.remove('light', 'warm', 'dark');
-  document.body.classList.add(theme);
-  localStorage.setItem('theme', theme);
-};
+app.component('font-awesome-icon', FontAwesomeIcon);
 
 app.use(router);
 
