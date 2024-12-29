@@ -4,7 +4,6 @@
 
 @layer base {
   html {
-    font-family: 'Mali', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-      'Courier New', monospace;
+    font-family: 'Ubuntu Mono', ui-monospace, Menlo, 'Liberation Mono', 'Courier New', monospace;
   }
 }
