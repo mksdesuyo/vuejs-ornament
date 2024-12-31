@@ -8,7 +8,19 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      meta: { title: 'Home Page' },
+      meta: {
+        title: 'Home Page',
+        description: 'Rizqi MKS portfolio website - Home Page',
+      },
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: () => import('../views/AboutView.vue'),
+      meta: {
+        title: 'About Page',
+        description: 'Rizqi MKS portfolio website - About Page',
+      },
     },
     // {
     //   path: '/about',
@@ -19,15 +31,16 @@ const router = createRouter({
   ],
 });
 
-router.beforeEach((to, from, next) => {
-  const baseTitle = 'MKS Ornament';
-  if (to.meta.title) {
-    document.title = `${to.meta.title} - ${baseTitle}`;
-  } else {
-    document.title = baseTitle;
-  }
+router.beforeEach((to) => {
+  const { title, description } = to.meta;
+  const defaultTitle = 'Rizqi MKS';
+  const defaultDescription = 'Rizqi MKS portfolio website';
 
-  next();
+  document.title = title || defaultTitle;
+
+  const descriptionElement = document.querySelector('head meta[name="description"]');
+
+  descriptionElement.setAttribute('content', description || defaultDescription);
 });
 
 export default router;
