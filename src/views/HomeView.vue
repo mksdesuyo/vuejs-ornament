@@ -9,21 +9,21 @@
       <span class="px-1 text-[#F05340] bg-red-100 rounded">Laravel</span>.
     </p>
     <div class="flex flex-wrap gap-2 mt-4">
-      <a
-        href="/about"
-        class="duration-150 ease-in-out p-2 border-2 border-gray-700 rounded hover:rotate-3"
+      <router-link
+        to="/about"
+        class="p-2 duration-150 ease-in-out border-2 border-gray-700 rounded hover:rotate-3"
         data-discover="true"
         aria-current="page"
-        >Know more about me</a
+        >Know more about me</router-link
       >
       <a
         href="#"
-        class="duration-150 ease-in-out p-2 border-2 border-gray-700 rounded hover:-rotate-3"
+        class="p-2 duration-150 ease-in-out border-2 border-gray-700 rounded hover:-rotate-3"
         >Examine my works</a
       >
       <a
         href="#"
-        class="duration-150 ease-in-out p-2 border-2 border-gray-700 rounded hover:rotate-3"
+        class="p-2 duration-150 ease-in-out border-2 border-gray-700 rounded hover:rotate-3"
         >See my experiences</a
       >
     </div>

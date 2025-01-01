@@ -1,7 +1,9 @@
 <template>
   <header class="fixed top-0 left-0 right-0 z-50 px-8 pt-5">
     <nav class="flex items-center justify-between">
-      <a href="/" class="text-lg font-medium" data-discover="true" aria-current="page">MKS.proc</a>
+      <router-link to="/" class="text-lg font-medium" data-discover="true" aria-current="page"
+        >MKS.proc</router-link
+      >
       <div class="flex items-center gap-2">
         <div>
           <select id="theme-selector" class="text-sm border-r-4 border-rose-500">

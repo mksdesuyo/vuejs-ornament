@@ -5,7 +5,13 @@ import FooterApp from './components/FooterApp.vue';
 </script>
 
 <template>
-  <HeaderApp v-once />
-  <RouterView />
-  <FooterApp v-once />
+  <HeaderApp />
+  <transition
+    enter-active-class="animate-fadeIn"
+    leave-active-class="animate-fadeOut"
+    mode="out-in"
+  >
+    <RouterView />
+  </transition>
+  <FooterApp />
 </template>
