@@ -22,12 +22,6 @@ const router = createRouter({
         description: 'Rizqi MKS portfolio website - About Page',
       },
     },
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   component: () => import('../views/AboutView.vue'),
-    //   meta: { title: 'About Us' },
-    // },
   ],
 });
 
