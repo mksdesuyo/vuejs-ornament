@@ -9,9 +9,9 @@
         Indonesia.<br />
         With a proper foundation in web development, I specialize in creating
         <span class="font-bold">Front-End</span> solutions using
-        <span class="bg-green-100 px-1 text-[#41B883] rounded">VueJs</span> and developing
+        <span class="bg-green-100 px-1 text-[#41B883] rounded-md">VueJs</span> and developing
         <span class="font-bold">Back-End</span> systems with
-        <span class="px-1 text-[#F05340] bg-red-100 rounded">Laravel</span>. <br />
+        <span class="px-1 text-[#F05340] bg-red-100 rounded-md">Laravel</span>. <br />
         <br />
         Beyond coding, I have deep passion for learning new languages and cultures. I can
         communicate in <span class="font-bold">English</span> and
@@ -33,6 +33,13 @@
         I'm eager to collaborate and bring innovative ideas to life in the ever-evolving tech
         industry.
       </p>
+      <div class="flex flex-wrap gap-2 mt-4 text-sm font-bold">
+        <a
+          href="#"
+          class="p-2 px-4 text-gray-700 transition-all duration-200 ease-in-out border-2 border-gray-700 rounded-lg shadow-md hover:bg-gray-700 hover:text-gray-50"
+          >Personal CV</a
+        >
+      </div>
     </div>
   </main>
 </template>

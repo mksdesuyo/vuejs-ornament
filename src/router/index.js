@@ -22,6 +22,15 @@ const router = createRouter({
         description: 'Rizqi MKS portfolio website - About Page',
       },
     },
+    {
+      path: '/project',
+      name: 'project',
+      component: () => import('../views/ProjectView.vue'),
+      meta: {
+        title: 'About Page',
+        description: 'Rizqi MKS portfolio website - Project Page',
+      },
+    },
   ],
 });
 
