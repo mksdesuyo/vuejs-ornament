@@ -9,8 +9,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faHeart, faFacebook, faGithub, faInstagram, faLinkedin);
+library.add(faHeart, faFacebook, faGithub, faInstagram, faLinkedin, faArrowUpRightFromSquare);
 
 const app = createApp(App);
 

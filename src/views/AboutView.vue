@@ -1,8 +1,8 @@
 <template>
   <main class="grid gap-2 px-8 py-16 pt-8 leading-5 h-dvh">
     <h1 class="pt-12 text-4xl">Who I am</h1>
-    <div class="w-3/5 mb-2 border-2 border-black rounded"></div>
-    <div class="pr-1 overflow-y-auto">
+    <hr class="w-3/5 mb-2 border-2 border-black rounded-md" />
+    <div class="pr-2 overflow-y-auto">
       <p>
         Greetings! I'm Rizqi Muhammad Khatami Sandi, a
         <span class="font-bold">Junior Web Developer</span> certified by BNSP and based in Garut,
