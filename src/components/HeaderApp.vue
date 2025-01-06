@@ -24,5 +24,34 @@
         </button>
       </div>
     </nav>
+    <ul class="flex flex-col p-2 bg-gray-100 border-2 rounded-md border-gray-50 just">
+      <li>
+        <router-link
+          to="/about"
+          class="duration-150 ease-in-out hover:ml-2"
+          data-discover="true"
+          aria-current="page"
+          >About</router-link
+        >
+      </li>
+      <li>
+        <router-link
+          to="#"
+          class="duration-150 ease-in-out hover:ml-2"
+          data-discover="true"
+          aria-current="page"
+          >Experiences</router-link
+        >
+      </li>
+      <li>
+        <router-link
+          to="/project"
+          class="duration-150 ease-in-out hover:ml-2"
+          data-discover="true"
+          aria-current="page"
+          >Projects</router-link
+        >
+      </li>
+    </ul>
   </header>
 </template>
