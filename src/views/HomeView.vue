@@ -14,21 +14,21 @@
         class="p-2 px-4 text-gray-700 transition-all duration-200 ease-in-out border-2 border-gray-700 rounded-lg shadow-md hover:bg-gray-700 hover:text-gray-50"
         data-discover="true"
         aria-current="page"
-        >Know more about me</router-link
+        >Know more about me ></router-link
       >
       <router-link
         to="#"
         class="p-2 px-4 text-gray-700 transition-all duration-200 ease-in-out border-2 border-gray-700 rounded-lg shadow-md hover:bg-gray-700 hover:text-gray-50"
         data-discover="true"
         aria-current="page"
-        >See my experiences</router-link
+        >See my experiences >></router-link
       >
       <router-link
         to="/project"
         class="p-2 px-4 text-gray-700 transition-all duration-200 ease-in-out border-2 border-gray-700 rounded-lg shadow-md hover:bg-gray-700 hover:text-gray-50"
         data-discover="true"
         aria-current="page"
-        >Examine my projects</router-link
+        >Examine my projects >>></router-link
       >
     </div>
   </main>
