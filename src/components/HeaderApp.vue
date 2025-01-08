@@ -24,34 +24,30 @@
         </button>
       </div>
     </nav>
-    <ul class="flex flex-col p-2 bg-gray-100 border-2 rounded-md border-gray-50 just">
-      <li>
+    <ul class="flex flex-col p-2 bg-gray-100 border-2 rounded-md border-gray-50">
+      <li v-for="route in routes" :key="route.name">
         <router-link
-          to="/about"
+          :to="route.path"
           class="duration-150 ease-in-out hover:ml-2"
           data-discover="true"
           aria-current="page"
-          >About</router-link
-        >
-      </li>
-      <li>
-        <router-link
-          to="#"
-          class="duration-150 ease-in-out hover:ml-2"
-          data-discover="true"
-          aria-current="page"
-          >Experiences</router-link
-        >
-      </li>
-      <li>
-        <router-link
-          to="/project"
-          class="duration-150 ease-in-out hover:ml-2"
-          data-discover="true"
-          aria-current="page"
-          >Projects</router-link
+          >{{ route.name }}</router-link
         >
       </li>
     </ul>
   </header>
 </template>
+
+<script>
+export default {
+  setup() {
+    let routes = [
+      { name: 'About', path: '/about' },
+      { name: 'Experiences', path: '/experience' },
+      { name: 'Projects', path: '/project' },
+    ];
+
+    return { routes };
+  },
+};
+</script>
