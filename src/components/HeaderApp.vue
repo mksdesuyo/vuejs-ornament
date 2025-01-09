@@ -1,5 +1,9 @@
+<!-- <script setup lang="ts">
+import NavMenu from './NavMenu.vue';
+</script> -->
+
 <template>
-  <header class="fixed top-0 left-0 right-0 z-50 px-8 pt-5">
+  <header class="fixed top-0 left-0 right-0 z-50 px-8 pt-5 bg-white">
     <nav class="flex items-center justify-between">
       <router-link to="/" class="text-lg font-medium" data-discover="true" aria-current="page"
         >MKS.proc</router-link
@@ -24,30 +28,6 @@
         </button>
       </div>
     </nav>
-    <ul class="flex flex-col p-2 bg-gray-100 border-2 rounded-md border-gray-50">
-      <li v-for="route in routes" :key="route.name">
-        <router-link
-          :to="route.path"
-          class="duration-150 ease-in-out hover:ml-2"
-          data-discover="true"
-          aria-current="page"
-          >{{ route.name }}</router-link
-        >
-      </li>
-    </ul>
+    <!-- <NavMenu /> -->
   </header>
 </template>
-
-<script>
-export default {
-  setup() {
-    let routes = [
-      { name: 'About', path: '/about' },
-      { name: 'Experiences', path: '/experience' },
-      { name: 'Projects', path: '/project' },
-    ];
-
-    return { routes };
-  },
-};
-</script>

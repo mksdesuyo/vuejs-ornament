@@ -2,6 +2,9 @@
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
+    screens: {
+      xs: '320px',
+    },
     extend: {
       transitionProperty: {
         opacity: 'opacity',
