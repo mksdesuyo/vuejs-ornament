@@ -5,19 +5,24 @@ import NavMenu from './NavMenu.vue';
 <template>
   <header class="fixed top-0 left-0 right-0 z-50 px-8 pt-5 bg-white">
     <nav class="flex items-center justify-between">
-      <router-link to="/" class="text-lg font-medium" data-discover="true" aria-current="page"
+      <router-link to="/" class="text-base font-medium" data-discover="true" aria-current="page"
         >MKS.proc</router-link
       >
       <div class="flex items-center gap-2">
         <div>
-          <select id="theme-selector" class="text-sm border-r-4 border-rose-500">
+          <select id="theme-selector" class="text-xs border-r-4 border-rose-500">
             <option value="light">Light</option>
             <option value="warm">Warm</option>
             <option value="dark">Dark</option>
           </select>
         </div>
         <button>
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            class="w-4 h-4 xs:w-5 xs:h-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"

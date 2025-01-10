@@ -3,7 +3,7 @@ export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     screens: {
-      xs: '320px',
+      xs: '360px',
     },
     extend: {
       transitionProperty: {

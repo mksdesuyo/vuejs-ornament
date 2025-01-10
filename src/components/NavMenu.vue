@@ -1,6 +1,6 @@
 <template>
   <ul
-    class="flex flex-col justify-self-end text-right p-2 bg-gray-100 border-2 rounded-md border-gray-50"
+    class="flex flex-col p-2 text-right bg-gray-100 border-2 rounded-md justify-self-end border-gray-50"
   >
     <li v-for="route in routes" :key="route.name">
       <router-link
@@ -16,14 +16,14 @@
 
 <script>
 export default {
-  setup() {
-    let routes = [
-      { name: 'About', path: '/about' },
-      { name: 'Experiences', path: '/experience' },
-      { name: 'Projects', path: '/project' },
-    ];
-
-    return { routes };
+  data() {
+    return {
+      routes: [
+        { name: 'About', path: '/about' },
+        { name: 'Experiences', path: '/experience' },
+        { name: 'Projects', path: '/project' },
+      ],
+    };
   },
 };
 </script>
