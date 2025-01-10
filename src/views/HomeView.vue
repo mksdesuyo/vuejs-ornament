@@ -1,5 +1,5 @@
 <script setup>
-import RLBtn from '../components/RouterLinkBtn.vue';
+import RLButton from '../components/RouterLinkBtn.vue';
 </script>
 
 <template>
@@ -13,7 +13,7 @@ import RLBtn from '../components/RouterLinkBtn.vue';
       <span class="px-1 text-[#F05340] bg-red-100 rounded-md">Laravel</span>.
     </p>
     <div class="flex flex-wrap items-center pb-2 mt-2 text-xs font-bold gap-x-2 gap-y-2">
-      <RLBtn v-for="link in links" :key="link.text" :text="link.text" :to="link.path" />
+      <RLButton v-for="link in links" :key="link.text" :text="link.text" :to="link.path" />
     </div>
   </main>
 </template>
