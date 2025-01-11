@@ -3,8 +3,8 @@ import ProjectCard from '@/components/ProjectCard.vue';
 </script>
 
 <template>
-  <main class="grid gap-2 px-8 py-16 pt-2 leading-5 h-dvh">
-    <h1 class="pt-12 text-3xl">My projects</h1>
+  <main class="grid gap-2 px-8 py-16 pt-2 leading-5 h-dvh xs:pt-4">
+    <h1 class="pt-12 text-3xl xs:text-4xl">My projects</h1>
     <hr class="w-4/5 mb-2 border-2 border-black rounded-md" />
     <div class="pr-2 overflow-y-auto">
       <ProjectCard
