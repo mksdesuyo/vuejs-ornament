@@ -6,24 +6,27 @@ import doistPreviewImage from '@/assets/doist-preview.png';
   <div class="flex flex-col gap-4 mb-2">
     <header class="flex flex-col gap-1 font-bold">
       <img :src="doistPreviewImage" alt="DOIST project preview image" class="rounded-md w-52" />
-      <a href="https://mks-todolist.netlify.app/" target="_blank" rel="noreferrer noopener">
-        <h2 class="text-base">DOIST: Simple To-Do List Web Application</h2>
+      <a :href="link" target="_blank" rel="noreferrer noopener">
+        <h2 class="text-base">{{ title }}</h2>
       </a>
-      <p class="text-sm opacity-75">Personal Project</p>
+      <p class="text-sm opacity-75">{{ project_type }}</p>
     </header>
     <p class="text-sm">
-      A simple yet functional to-do list web application, developed independently using insights and
-      guidance from Dicoding Academy's class modules.
+      {{ description }}
     </p>
     <footer class="flex flex-col gap-2">
-      <ul class="flex flex-wrap gap-2 text-sm">
-        <li class="px-1 text-orange-700 bg-orange-100 rounded-md">HTML</li>
-        <li class="px-1 text-blue-700 bg-blue-100 rounded-md">CSS</li>
-        <li class="px-1 text-yellow-700 bg-yellow-100 rounded-md">JavaScript</li>
-        <li class="px-1 text-pink-700 bg-pink-100 rounded-md">Sass</li>
+      <ul class="flex flex-wrap items-center gap-2 text-sm">
+        <li
+          v-for="tech in techStack"
+          :key="tech"
+          class="px-1 rounded-md"
+          :class="getBadgeClass(tech)"
+        >
+          {{ tech }}
+        </li>
       </ul>
       <a
-        href="https://mks-todolist.netlify.app/"
+        :href="link"
         target="_blank"
         rel="noreferrer noopener"
         class="px-4 py-2 text-xs font-bold text-gray-700 transition-all duration-200 ease-in-out border-2 border-gray-700 rounded-lg shadow-md w-fit hover:bg-gray-700 hover:text-gray-50"
@@ -46,9 +49,30 @@ export default {
       type: String,
       default: 'Personal Project',
     },
-    description: {
+    link: {
       type: String,
       required: true,
+    },
+    description: {
+      type: Object,
+      required: true,
+    },
+    techStack: {
+      type: Array,
+      required: true,
+    },
+  },
+  methods: {
+    getBadgeClass(tech) {
+      const techClasses = {
+        HTML: ['bg-orange-100', 'text-orange-700'],
+        CSS: ['bg-blue-100', 'text-blue-700'],
+        JavaScript: ['bg-yellow-100', 'text-yellow-700'],
+        Sass: ['bg-pink-100', 'text-pink-700'],
+        Bootstrap: ['bg-purple-100', 'text-purple-700'],
+        Leaflet: ['bg-lime-100', 'text-lime-700'],
+      };
+      return techClasses[tech] || ['bg-gray-500', 'text-white'];
     },
   },
 };
