@@ -1,6 +1,7 @@
-<!-- <script setup lang="ts">
+<script setup>
 import NavMenu from './NavMenu.vue';
-</script> -->
+import { ref } from 'vue';
+</script>
 
 <template>
   <header class="fixed top-0 left-0 right-0 z-50 px-8 pt-5 bg-white">
@@ -20,7 +21,7 @@ import NavMenu from './NavMenu.vue';
             <option value="dark">Dark</option>
           </select>
         </div>
-        <button>
+        <button @click="toggleMenu">
           <svg
             class="w-4 h-4 xs:w-5 xs:h-5"
             viewBox="0 0 24 24"
@@ -37,6 +38,30 @@ import NavMenu from './NavMenu.vue';
         </button>
       </div>
     </nav>
+    <NavMenu :isOpen="menuOpen" />
   </header>
-  <!-- <NavMenu /> -->
 </template>
+
+<script>
+const menuOpen = ref(false);
+
+const toggleMenu = () => {
+  menuOpen.value = !menuOpen.value;
+};
+</script>
+
+<style scoped>
+/* Animasi untuk menu */
+.menu-enter-active,
+.menu-leave-active {
+  transition:
+    opacity 0.3s,
+    transform 0.3s ease-out;
+}
+
+.menu-enter-from,
+.menu-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+</style>
