@@ -1,5 +1,8 @@
 <script setup>
 import ProjectCard from '@/components/ProjectCard.vue';
+import doistPreviewImage from '@/assets/doist-preview.png';
+import closeWeatherMapPreviewImage from '@/assets/close-weather-map-preview.png';
+import aiticampPreviewImage from '@/assets/aiticamp-preview.png';
 </script>
 
 <template>
@@ -10,6 +13,7 @@ import ProjectCard from '@/components/ProjectCard.vue';
       <ProjectCard
         v-for="project in projects"
         :key="project"
+        :image="project.image"
         :title="project.title"
         :project_type="project.project_type"
         :link="project.link"
@@ -26,6 +30,7 @@ export default {
     return {
       projects: [
         {
+          image: doistPreviewImage,
           title: 'DOIST: Simple To-Do List Web Application',
           project_type: 'Personal Project',
           link: 'https://mks-todolist.netlify.app/',
@@ -34,6 +39,7 @@ export default {
           techStack: ['HTML', 'CSS', 'JavaScript', 'Sass'],
         },
         {
+          image: closeWeatherMapPreviewImage,
           title: 'Close Weather Map',
           project_type: 'Team Project',
           link: 'https://close-weather-map.netlify.app/',
@@ -42,6 +48,7 @@ export default {
           techStack: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Leaflet'],
         },
         {
+          image: aiticampPreviewImage,
           title: 'Aiticamp: Simple Landing Web Page',
           project_type: 'Team Project',
           link: 'https://aiticamp.netlify.app/',

@@ -1,11 +1,7 @@
-<script setup>
-import doistPreviewImage from '@/assets/doist-preview.png';
-</script>
-
 <template>
   <div class="flex flex-col gap-4 mb-2">
     <header class="flex flex-col gap-1 font-bold">
-      <img :src="doistPreviewImage" alt="DOIST project preview image" class="rounded-md w-52" />
+      <img :src="image" :alt="`${title} preview image`" class="rounded-md w-52" />
       <a :href="link" target="_blank" rel="noreferrer noopener">
         <h2 class="text-base xs:text-lg">{{ title }}</h2>
       </a>
@@ -41,6 +37,10 @@ import doistPreviewImage from '@/assets/doist-preview.png';
 export default {
   name: 'ProjectCard',
   props: {
+    image: {
+      type: String,
+      required: true,
+    },
     title: {
       type: String,
       required: true,
@@ -51,7 +51,7 @@ export default {
     },
     link: {
       type: String,
-      required: true,
+      default: '#',
     },
     description: {
       type: Object,
