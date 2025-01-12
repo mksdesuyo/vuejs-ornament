@@ -14,7 +14,8 @@
           <a :href="social.link" target="_blank" rel="noreferrer noopener"
             ><font-awesome-icon
               :icon="['fab', social.name]"
-              class="duration-150 ease-in-out opacity-75 hover:opacity-100 hover:text-[#1778F2]"
+              class="duration-150 ease-in-out opacity-75 hover:opacity-100"
+              :class="social.color"
           /></a>
         </li>
       </ul>
@@ -27,10 +28,22 @@ export default {
   data() {
     return {
       socials: [
-        { name: 'facebook', link: '/about' },
-        { name: 'github', link: '/about' },
-        { name: 'instagram', link: '/about' },
-        { name: 'linkedin', link: '/about' },
+        {
+          name: 'facebook',
+          link: 'https://www.facebook.com/rizqi.mks.22/',
+          color: 'hover:text-blue-600',
+        },
+        { name: 'github', link: 'https://github.com/mksdesuyo/', color: 'hover:text-gray-900' },
+        {
+          name: 'instagram',
+          link: 'https://www.instagram.com/houtarou_rizuki/',
+          color: 'hover:text-pink-500',
+        },
+        {
+          name: 'linkedin',
+          link: 'https://www.linkedin.com/in/rizqimks/',
+          color: 'hover:text-blue-700',
+        },
       ],
     };
   },
