@@ -20,12 +20,12 @@ import NavMenu from './NavMenu.vue';
             <option value="dark">Dark</option>
           </select>
         </div>
-        <button @click="open = !open" class="grid w-4 h-4 place-self-center">
-          <font-awesome-icon :icon="open ? ['fas', 'x'] : ['fas', 'bars']" />
+        <button @click="isOpen = !isOpen" class="grid w-4 h-4 place-self-center">
+          <font-awesome-icon :icon="isOpen ? ['fas', 'x'] : ['fas', 'bars']" />
         </button>
       </div>
     </nav>
-    <NavMenu :class="[open ? 'right-8 opacity-100' : '-right-full opacity-0']" />
+    <NavMenu :class="[isOpen ? 'right-8' : '-right-full']" />
   </header>
 </template>
 
@@ -33,7 +33,7 @@ import NavMenu from './NavMenu.vue';
 export default {
   data() {
     return {
-      open: false,
+      isOpen: false,
     };
   },
 };
