@@ -1,7 +1,6 @@
 <template>
   <ul
-    v-if="isOpen"
-    class="absolute flex flex-col gap-2 px-4 py-2 mt-2 text-sm text-right transition-all duration-1000 ease-in-out border-2 rounded-md shadow-md right-8 w-fit border-gray-50 xs:text-base"
+    class="absolute flex flex-col w-1/4 gap-2 px-4 py-2 mt-2 text-sm text-right text-gray-700 transition-all duration-700 ease-in-out bg-white border-2 rounded-md shadow-md top-12 border-gray-50 xs:text-base"
   >
     <li v-for="route in routes" :key="route.name">
       <router-link
@@ -17,20 +16,23 @@
 
 <script>
 export default {
-  props: {
-    isOpen: {
-      type: Boolean,
-      required: true,
-    },
-  },
   data() {
     return {
       routes: [
-        { name: 'About .01', path: '/about' },
-        { name: 'Experiences .02', path: '/experience' },
+        { name: 'Home .01', path: '/' },
+        { name: 'About .02', path: '/about' },
         { name: 'Projects .03', path: '/project' },
       ],
     };
   },
 };
 </script>
+
+<style scoped>
+.router-link-active {
+  color: goldenrod;
+}
+.no-active.router-link-active {
+  color: black;
+}
+</style>
