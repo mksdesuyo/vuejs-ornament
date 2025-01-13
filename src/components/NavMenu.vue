@@ -1,11 +1,7 @@
 <template>
   <ul
     v-if="isOpen"
-    class="absolute flex flex-col gap-2 px-4 py-2 mt-2 text-sm text-right transition-all duration-1000 border-2 rounded-md shadow-md right-8 w-fit border-gray-50 xs:text-base"
-    :class="{
-      'opacity-100 top-12': isOpen,
-      'opacity-0 -top-12 pointer-events-none': !isOpen,
-    }"
+    class="absolute flex flex-col gap-2 px-4 py-2 mt-2 text-sm text-right transition-all duration-1000 ease-in-out border-2 rounded-md shadow-md right-8 w-fit border-gray-50 xs:text-base"
   >
     <li v-for="route in routes" :key="route.name">
       <router-link

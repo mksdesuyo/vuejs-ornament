@@ -10,8 +10,19 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faX } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faHeart, faFacebook, faGithub, faInstagram, faLinkedin, faArrowUpRightFromSquare);
+library.add(
+  faHeart,
+  faFacebook,
+  faGithub,
+  faInstagram,
+  faLinkedin,
+  faArrowUpRightFromSquare,
+  faBars,
+  faX,
+);
 
 const app = createApp(App);
 
