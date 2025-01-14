@@ -7,21 +7,27 @@ import NavMenu from './NavMenu.vue';
     <nav class="flex items-center justify-between">
       <router-link
         to="/"
-        class="text-base font-medium xs:text-lg no-active"
+        class="text-base font-medium xs:text-lg sm:text-2xl no-active"
         data-discover="true"
         aria-current="page"
         >MKS.proc</router-link
       >
       <div class="flex items-center gap-2">
-        <div>
-          <select id="theme-selector" class="text-xs border-r-4 border-rose-500 xs:text-base">
+        <div class="grid">
+          <select
+            id="theme-selector"
+            class="text-xs border-r-4 border-rose-500 xs:text-base sm:text-xl"
+          >
             <option value="light">Light</option>
             <option value="warm">Warm</option>
             <option value="dark">Dark</option>
           </select>
         </div>
-        <button @click="isOpen = !isOpen" class="grid w-4 h-4 place-self-center">
-          <font-awesome-icon :icon="isOpen ? ['fas', 'x'] : ['fas', 'bars']" />
+        <button @click="isOpen = !isOpen" class="grid w-auto">
+          <font-awesome-icon
+            :icon="isOpen ? ['fas', 'x'] : ['fas', 'bars']"
+            class="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5"
+          />
         </button>
       </div>
     </nav>

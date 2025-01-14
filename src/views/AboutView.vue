@@ -1,9 +1,11 @@
 <template>
-  <main class="grid gap-2 px-8 py-16 pt-2 leading-5 h-dvh xs:pt-4">
-    <h1 class="pt-12 text-3xl xs:text-4xl">Who I am</h1>
-    <hr class="w-3/5 mb-2 border-2 border-black rounded-md" />
+  <main class="grid gap-2 px-8 py-16 pt-2 leading-5 h-dvh place-content-center xs:pt-4">
+    <div>
+      <h1 class="pt-12 mb-2 text-3xl xs:text-4xl sm:text-6xl">Who I am</h1>
+      <hr class="w-3/5 mb-2 border-2 border-black rounded-md sm:w-3/6" />
+    </div>
     <div class="pr-2 overflow-y-auto">
-      <p class="text-sm xs:text-base">
+      <p class="text-sm xs:text-base sm:text-xl">
         Greetings! I'm Rizqi Muhammad Khatami Sandi, a
         <span class="font-bold">Junior Web Developer</span> certified by BNSP and based in Garut,
         Indonesia.<br />
@@ -33,7 +35,7 @@
         I'm eager to collaborate and bring innovative ideas to life in the ever-evolving tech
         industry.
       </p>
-      <div class="flex flex-wrap gap-2 mt-4 text-xs font-bold xs:text-sm">
+      <div class="flex flex-wrap gap-2 mt-4 text-xs font-bold xs:text-sm sm:text-lg">
         <a
           href="#"
           class="p-2 px-4 text-gray-700 transition-all duration-200 ease-in-out border-2 border-gray-700 rounded-lg shadow-md hover:bg-gray-700 hover:text-gray-50"

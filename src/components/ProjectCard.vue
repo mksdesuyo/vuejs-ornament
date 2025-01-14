@@ -1,17 +1,21 @@
 <template>
-  <div class="flex flex-col gap-4 mb-2">
+  <div class="flex flex-col gap-4 mb-4">
     <header class="flex flex-col gap-1 font-bold">
-      <img :src="image" :alt="`${title} preview image`" class="rounded-md w-52" />
+      <img
+        :src="image"
+        :alt="`${title} preview image`"
+        class="w-10/12 rounded-md xs:w-8/12 sm:w-7/12"
+      />
       <a :href="link" target="_blank" rel="noreferrer noopener">
-        <h2 class="text-base xs:text-lg">{{ title }}</h2>
+        <h2 class="text-base xs:text-lg sm:text-2xl">{{ title }}</h2>
       </a>
-      <p class="text-sm opacity-75 xs:text-base">{{ project_type }}</p>
+      <p class="text-sm opacity-75 xs:text-base sm:text-xl">{{ project_type }}</p>
     </header>
-    <p class="text-sm xs:text-base">
+    <p class="text-sm xs:text-base sm:text-xl">
       {{ description }}
     </p>
-    <footer class="flex flex-col gap-2">
-      <ul class="flex flex-wrap items-center gap-2 text-sm xs:text-base">
+    <footer class="flex flex-col gap-4">
+      <ul class="flex flex-wrap items-center gap-2 text-sm xs:text-base sm:text-xl">
         <li
           v-for="tech in techStack"
           :key="tech"
@@ -25,7 +29,7 @@
         :href="link"
         target="_blank"
         rel="noreferrer noopener"
-        class="px-4 py-2 text-xs font-bold text-gray-700 transition-all duration-200 ease-in-out border-2 border-gray-700 rounded-lg shadow-md xs:text-sm w-fit hover:bg-gray-700 hover:text-gray-50"
+        class="px-4 py-2 text-xs font-bold text-gray-700 transition-all duration-200 ease-in-out border-2 border-gray-700 rounded-lg shadow-md xs:text-sm w-fit hover:bg-gray-700 hover:text-gray-50 sm:text-lg"
         >View Demo <font-awesome-icon :icon="['fas', 'arrow-up-right-from-square']"
       /></a>
     </footer>

@@ -2,10 +2,10 @@
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
-    screens: {
-      xs: '360px',
-    },
     extend: {
+      screens: {
+        xs: '360px',
+      },
       transitionProperty: {
         opacity: 'opacity',
       },

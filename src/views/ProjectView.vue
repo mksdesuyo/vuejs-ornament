@@ -6,10 +6,12 @@ import aiticampPreviewImage from '@/assets/aiticamp-preview.png';
 </script>
 
 <template>
-  <main class="grid gap-2 px-8 py-16 pt-2 leading-5 h-dvh xs:pt-4">
-    <h1 class="pt-12 text-3xl xs:text-4xl">My projects</h1>
-    <hr class="w-4/5 mb-2 border-2 border-black rounded-md" />
-    <div class="pr-2 overflow-y-auto">
+  <main class="grid gap-2 px-8 py-16 pt-2 leading-5 h-dvh xs:pt-4 sm:place-content-center sm:pt-6">
+    <div>
+      <h1 class="pt-12 mb-2 text-3xl xs:text-4xl sm:text-6xl">My Projects</h1>
+      <hr class="w-4/5 mb-2 border-2 border-black rounded-md sm:w-4/6" />
+    </div>
+    <div class="pr-2 overflow-y-auto sm:my-4">
       <ProjectCard
         v-for="project in projects"
         :key="project"
