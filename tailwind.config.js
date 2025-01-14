@@ -3,6 +3,14 @@ export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      backgroundImage: {
+        crossword: "url('/src/assets/crossword.png')",
+        blackorchid: "url('/src/assets/blackorchid.png')",
+      },
+      colors: {
+        gunmetal: '#262c3c',
+        lotion: '#fafafa',
+      },
       screens: {
         xs: '360px',
       },
@@ -23,14 +31,6 @@ export default {
         fadeIn: 'fadeIn 750ms ease-in-out',
         fadeOut: 'fadeOut 750ms ease-in-out',
       },
-      // colors: {
-      //   lightBackground: '#f5f1f1',
-      //   lightText: '#323336',
-      //   darkBackground: '#1a202c',
-      //   darkText: '#edf2f7',
-      //   warmBackground: '#d7b59e',
-      //   warmText: '#4e2a19',
-      // },
     },
   },
   plugins: [],
