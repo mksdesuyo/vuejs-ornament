@@ -12,6 +12,7 @@ import { faFacebook, faGithub, faInstagram, faLinkedin } from '@fortawesome/free
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faX } from '@fortawesome/free-solid-svg-icons';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
   faHeart,
@@ -22,6 +23,7 @@ library.add(
   faArrowUpRightFromSquare,
   faBars,
   faX,
+  faDownload,
 );
 
 const app = createApp(App);

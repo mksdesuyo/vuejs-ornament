@@ -1,15 +1,18 @@
 <template>
   <div class="flex flex-col gap-4 mb-4">
-    <header class="flex flex-col gap-1 font-bold">
+    <header class="flex flex-col gap-2 font-bold">
       <img
         :src="image"
         :alt="`${title} preview image`"
-        class="w-10/12 rounded-md xs:w-8/12 sm:w-7/12 lg:w-5/12"
+        class="w-10/12 border-2 border-gray-200 rounded-md xs:w-8/12 sm:w-7/12 lg:w-5/12"
+        @click="$emit('image-clicked', image)"
       />
-      <a :href="link" target="_blank" rel="noreferrer noopener">
-        <h2 class="text-base xs:text-lg sm:text-2xl">{{ title }}</h2>
-      </a>
-      <p class="text-sm opacity-75 xs:text-base sm:text-xl">{{ project_type }}</p>
+      <div>
+        <a :href="link" target="_blank" rel="noreferrer noopener">
+          <h2 class="text-base xs:text-lg sm:text-2xl">{{ title }}</h2>
+        </a>
+        <p class="text-sm opacity-75 xs:text-base sm:text-xl">{{ project_type }}</p>
+      </div>
     </header>
     <p class="text-sm xs:text-base sm:text-xl">
       {{ description }}

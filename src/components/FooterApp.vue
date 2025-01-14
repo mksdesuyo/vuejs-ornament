@@ -1,5 +1,5 @@
 <template>
-  <footer class="fixed bottom-0 left-0 right-0 z-50 px-8 pb-6 md:px-16 lg:px-48">
+  <footer class="fixed bottom-0 left-0 right-0 z-40 px-8 pb-6 md:px-16 lg:px-48">
     <div class="flex items-center justify-between text-xs xs:text-sm sm:text-lg">
       <p>
         Made with

@@ -3,7 +3,7 @@ import NavMenu from './NavMenu.vue';
 </script>
 
 <template>
-  <header class="fixed top-0 left-0 right-0 z-50 px-8 pt-6 md:px-16 lg:px-48">
+  <header class="fixed top-0 left-0 right-0 z-40 px-8 pt-6 md:px-16 lg:px-48">
     <nav class="flex items-center justify-between">
       <router-link
         to="/"

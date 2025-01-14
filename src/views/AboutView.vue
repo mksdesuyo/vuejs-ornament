@@ -4,7 +4,7 @@
   >
     <div>
       <h1 class="pt-12 mb-2 text-3xl xs:text-4xl sm:text-5xl md:text-6xl">Who I am</h1>
-      <hr class="w-3/5 mb-2 border-2 border-black rounded-md sm:w-3/6 lg:w-2/6" />
+      <hr class="w-3/5 mb-2 border-2 rounded-md border-gunmetal sm:w-3/6 lg:w-2/6" />
     </div>
     <div class="pr-2 overflow-y-auto">
       <p class="text-sm xs:text-base sm:text-xl md:text-2xl">
@@ -39,9 +39,17 @@
       </p>
       <div class="flex flex-wrap gap-2 mt-4 text-xs font-bold xs:text-sm sm:text-lg">
         <a
-          href="#"
+          href="https://drive.google.com/file/d/1sK72JqqrcNktKKtfVp3Lg2xclFH34GI3/view?usp=drive_link"
+          target="_blank"
           class="p-2 px-4 text-gray-700 transition-all duration-200 ease-in-out border-2 border-gray-700 rounded-lg shadow-md hover:bg-gray-700 hover:text-gray-50"
-          >Personal CV</a
+          >Personal CV <font-awesome-icon :icon="['fas', 'download']"
+        /></a>
+        <router-link
+          to="/project"
+          class="p-2 px-4 text-gray-700 transition-all duration-200 ease-in-out border-2 border-gray-700 rounded-lg shadow-md hover:bg-gray-700 hover:text-gray-50"
+          data-discover="true"
+          aria-current="page"
+          >See my projects ></router-link
         >
       </div>
     </div>

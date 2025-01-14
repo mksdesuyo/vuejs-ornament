@@ -34,7 +34,7 @@ export default {
     return {
       links: [
         { text: 'Know more about me >', path: '/about' },
-        { text: 'Examine my projects >>', path: '/project' },
+        { text: 'See my projects >>', path: '/project' },
       ],
     };
   },
