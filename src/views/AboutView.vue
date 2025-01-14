@@ -1,11 +1,13 @@
 <template>
-  <main class="grid gap-2 px-8 py-16 pt-2 leading-5 h-dvh place-content-center xs:pt-4">
+  <main
+    class="grid gap-2 px-8 pt-2 pb-16 leading-5 h-dvh place-content-center xs:pt-4 md:pt-8 md:pb-20 md:px-16 lg:px-48"
+  >
     <div>
-      <h1 class="pt-12 mb-2 text-3xl xs:text-4xl sm:text-6xl">Who I am</h1>
-      <hr class="w-3/5 mb-2 border-2 border-black rounded-md sm:w-3/6" />
+      <h1 class="pt-12 mb-2 text-3xl xs:text-4xl sm:text-5xl md:text-6xl">Who I am</h1>
+      <hr class="w-3/5 mb-2 border-2 border-black rounded-md sm:w-3/6 lg:w-2/6" />
     </div>
     <div class="pr-2 overflow-y-auto">
-      <p class="text-sm xs:text-base sm:text-xl">
+      <p class="text-sm xs:text-base sm:text-xl md:text-2xl">
         Greetings! I'm Rizqi Muhammad Khatami Sandi, a
         <span class="font-bold">Junior Web Developer</span> certified by BNSP and based in Garut,
         Indonesia.<br />

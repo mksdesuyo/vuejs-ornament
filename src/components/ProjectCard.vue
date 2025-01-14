@@ -4,7 +4,7 @@
       <img
         :src="image"
         :alt="`${title} preview image`"
-        class="w-10/12 rounded-md xs:w-8/12 sm:w-7/12"
+        class="w-10/12 rounded-md xs:w-8/12 sm:w-7/12 lg:w-5/12"
       />
       <a :href="link" target="_blank" rel="noreferrer noopener">
         <h2 class="text-base xs:text-lg sm:text-2xl">{{ title }}</h2>

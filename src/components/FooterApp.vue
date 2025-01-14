@@ -1,5 +1,5 @@
 <template>
-  <footer class="fixed bottom-0 left-0 right-0 z-50 px-8 pb-6">
+  <footer class="fixed bottom-0 left-0 right-0 z-50 px-8 pb-6 md:px-16 lg:px-48">
     <div class="flex items-center justify-between text-xs xs:text-sm sm:text-lg">
       <p>
         Made with
@@ -9,7 +9,7 @@
         />
         by MKS
       </p>
-      <ul class="flex gap-3">
+      <ul class="flex gap-3 sm:gap-5">
         <li v-for="social in socials" :key="social.icon">
           <a :href="social.link" target="_blank" rel="noreferrer noopener"
             ><font-awesome-icon

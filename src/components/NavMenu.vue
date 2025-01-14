@@ -1,11 +1,11 @@
 <template>
   <ul
-    class="absolute flex flex-col w-2/5 gap-2 px-4 py-2 mt-2 text-sm text-right transition-all duration-500 ease-in-out border-2 rounded-md shadow-md top-12 border-gray-50 xs:text-base sm:text-lg sm:w-1/4 bg-crossword text-gunmetal"
+    class="absolute flex flex-col w-2/6 gap-4 py-2 mt-2 text-sm text-right transition-all duration-500 ease-in-out max-lg:border-2 max-lg:rounded-md max-lg:shadow-md max-lg:px-4 max-lg:bg-crossword lg:flex-row lg:static top-10 border-gray-50 xs:text-base sm:text-lg md:text-xl lg:w-full text-gunmetal lg:border-none lg:shadow-none xs:top-11 md:top-14"
   >
     <li v-for="route in routes" :key="route.name">
       <router-link
         :to="route.path"
-        class="duration-150 ease-in-out hover:mr-2"
+        class="duration-150 ease-in-out max-lg:hover:mr-2"
         data-discover="true"
         aria-current="page"
         >{{ route.name }}</router-link
@@ -19,9 +19,9 @@ export default {
   data() {
     return {
       routes: [
-        { name: 'Home .01', path: '/' },
-        { name: 'About .02', path: '/about' },
-        { name: 'Projects .03', path: '/project' },
+        { name: 'Home', path: '/' },
+        { name: 'About', path: '/about' },
+        { name: 'Projects', path: '/project' },
       ],
     };
   },
