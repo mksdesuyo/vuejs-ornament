@@ -3,6 +3,9 @@ import ProjectCard from '@/components/ProjectCard.vue';
 import doistPreviewImage from '@/assets/doist-preview.png';
 import closeWeatherMapPreviewImage from '@/assets/close-weather-map-preview.png';
 import aiticampPreviewImage from '@/assets/aiticamp-preview.png';
+import mksOrnamentV1PreviewImage from '@/assets/mks-ornament-v1_0_0-preview.png';
+import mksSocialsPreviewImage from '@/assets/mks-socials-preview.png';
+import mksOrnamentV2previewImage from '@/assets/mks-ornament-v2_0_0-preview.png';
 
 import { ref } from 'vue';
 
@@ -21,6 +24,24 @@ const closeModal = () => {
 
 const projects = [
   {
+    image: mksOrnamentV2previewImage,
+    title: 'MKS Ornament v2.0.0: Portfolio Website',
+    project_type: 'Personal Project',
+    link: 'https://mks-ornament.vercel.app/',
+    description:
+      'A sleek and modern digital store concept designed to showcase and sell creative assets. Featuring a responsive user interface, intuitive navigation, and a vibrant design, the website highlights digital ornaments with engaging visuals. Built using cutting-edge web technologies, it demonstrates an eye for aesthetics and functionality in e-commerce platforms.',
+    techStack: ['HTML', 'CSS', 'JavaScript', 'VueJs', 'Vite'],
+  },
+  {
+    image: mksSocialsPreviewImage,
+    title: 'MKS Socials: Linktree Like Website',
+    project_type: 'Personal Project',
+    link: 'https://mks-socials.vercel.app/',
+    description:
+      'A minimalist and user-friendly personal link hub inspired by platforms like Linktree. The website centralizes key social media and professional links in one accessible location. Crafted with Svelte and Tailwind CSS, it emphasizes responsive design and interactive elements to deliver a seamless user experience.',
+    techStack: ['HTML', 'CSS', 'JavaScript', 'Svelte'],
+  },
+  {
     image: doistPreviewImage,
     title: 'DOIST: Simple To-Do List Web Application',
     project_type: 'Personal Project',
@@ -28,6 +49,15 @@ const projects = [
     description:
       "A simple yet functional to-do list web application, developed independently using insights and guidance from Dicoding Academy's class modules.",
     techStack: ['HTML', 'CSS', 'JavaScript', 'Sass'],
+  },
+  {
+    image: mksOrnamentV1PreviewImage,
+    title: 'MKS Ornament v1.0.0: Portfolio Website',
+    project_type: 'Personal Project',
+    link: 'https://mksdesuyo.github.io/',
+    description:
+      'An interactive portfolio website showcasing personal projects, technical skills, and professional experiences. With a clean and professional layout, it highlights a passion for web development and design. Fully responsive and hosted on GitHub Pages, this site serves as a dynamic resume and an entry point for networking opportunities.',
+    techStack: ['HTML', 'CSS', 'JavaScript'],
   },
   {
     image: closeWeatherMapPreviewImage,
@@ -89,41 +119,3 @@ const projects = [
     </div>
   </main>
 </template>
-
-<!-- <script>
-export default {
-  data() {
-    return {
-      projects: [
-        {
-          image: doistPreviewImage,
-          title: 'DOIST: Simple To-Do List Web Application',
-          project_type: 'Personal Project',
-          link: 'https://mks-todolist.netlify.app/',
-          description:
-            "A simple yet functional to-do list web application, developed independently using insights and guidance from Dicoding Academy's class modules.",
-          techStack: ['HTML', 'CSS', 'JavaScript', 'Sass'],
-        },
-        {
-          image: closeWeatherMapPreviewImage,
-          title: 'Close Weather Map',
-          project_type: 'Team Project',
-          link: 'https://close-weather-map.netlify.app/',
-          description:
-            'A straightforward web page for checking weather conditions and exploring maps, collaboratively built with a teammate during the SIB Hacktiv8 x Kampus Merdeka program.',
-          techStack: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Leaflet'],
-        },
-        {
-          image: aiticampPreviewImage,
-          title: 'Aiticamp: Simple Landing Web Page',
-          project_type: 'Team Project',
-          link: 'https://aiticamp.netlify.app/',
-          description:
-            'A clean and minimalistic landing page created as part of a collaborative project with a teammate during the SIB Hacktiv8 x Kampus Merdeka program.',
-          techStack: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
-        },
-      ],
-    };
-  },
-};
-</script> -->

@@ -78,6 +78,9 @@ export default {
         Sass: ['bg-pink-100', 'text-pink-700'],
         Bootstrap: ['bg-purple-100', 'text-purple-700'],
         Leaflet: ['bg-lime-100', 'text-lime-700'],
+        VueJs: ['bg-green-100', 'text-green-700'],
+        Svelte: ['bg-orange-100', 'text-orange-700'],
+        Vite: ['bg-purple-500', 'text-yellow-400'],
       };
       return techClasses[tech] || ['bg-gray-500', 'text-white'];
     },
