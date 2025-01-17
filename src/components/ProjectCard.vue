@@ -4,21 +4,21 @@
       <img
         :src="image"
         :alt="`${title} preview image`"
-        class="w-10/12 border-2 border-gray-200 rounded-md xs:w-8/12 sm:w-7/12 lg:w-5/12"
+        class="border-2 border-gray-200 rounded-md w-44 xs:w-48 sm:w-96"
         @click="$emit('image-clicked', image)"
       />
       <div>
         <a :href="link" target="_blank" rel="noreferrer noopener">
-          <h2 class="text-base xs:text-lg sm:text-2xl">{{ title }}</h2>
+          <h2 class="text-base xs:text-lg sm:text-xl md:text-2xl">{{ title }}</h2>
         </a>
-        <p class="text-sm opacity-75 xs:text-base sm:text-xl">{{ project_type }}</p>
+        <p class="text-sm opacity-65 xs:text-base sm:text-lg md:text-xl">{{ project_type }}</p>
       </div>
     </header>
-    <p class="text-sm xs:text-base sm:text-xl">
+    <p class="text-sm xs:text-base sm:text-lg md:text-xl">
       {{ description }}
     </p>
     <footer class="flex flex-col gap-4">
-      <ul class="flex flex-wrap items-center gap-2 text-sm xs:text-base sm:text-xl">
+      <ul class="flex flex-wrap items-center gap-2 text-xs xs:text-sm sm:text-base md:text-lg">
         <li
           v-for="tech in techStack"
           :key="tech"
@@ -32,7 +32,7 @@
         :href="link"
         target="_blank"
         rel="noreferrer noopener"
-        class="px-4 py-2 text-xs font-bold text-gray-700 transition-all duration-200 ease-in-out border-2 border-gray-700 rounded-lg shadow-md xs:text-sm w-fit hover:bg-gray-700 hover:text-gray-50 sm:text-lg"
+        class="px-4 py-2 text-xs font-bold text-gray-700 transition-all duration-200 ease-in-out border-2 border-gray-700 rounded-lg shadow-md w-fit hover:bg-gray-700 hover:text-gray-50 xs:text-sm sm:text-base"
         >View Demo <font-awesome-icon :icon="['fas', 'arrow-up-right-from-square']"
       /></a>
     </footer>
@@ -80,7 +80,8 @@ export default {
         Leaflet: ['bg-lime-100', 'text-lime-700'],
         VueJs: ['bg-green-100', 'text-green-700'],
         Svelte: ['bg-orange-100', 'text-orange-700'],
-        Vite: ['bg-purple-500', 'text-yellow-400'],
+        Vite: ['bg-purple-700', 'text-yellow-300'],
+        'Tailwind CSS': ['bg-sky-100', 'text-sky-700'],
       };
       return techClasses[tech] || ['bg-gray-500', 'text-white'];
     },

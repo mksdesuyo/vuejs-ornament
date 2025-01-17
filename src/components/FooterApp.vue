@@ -1,11 +1,11 @@
 <template>
   <footer class="fixed bottom-0 left-0 right-0 z-40 px-8 pb-6 md:px-16 lg:px-48">
-    <div class="flex items-center justify-between text-xs xs:text-sm sm:text-lg">
+    <div class="flex items-center justify-between text-xs xs:text-sm sm:text-base">
       <p>
         Made with
         <font-awesome-icon
           :icon="['fas', 'heart']"
-          class="duration-150 ease-in-out opacity-75 hover:opacity-100 hover:text-red-500"
+          class="duration-150 ease-in-out opacity-85 hover:opacity-100 hover:text-red-500"
         />
         by MKS
       </p>
@@ -14,7 +14,7 @@
           <a :href="social.link" target="_blank" rel="noreferrer noopener"
             ><font-awesome-icon
               :icon="['fab', social.name]"
-              class="duration-150 ease-in-out opacity-75 hover:opacity-100"
+              class="duration-150 ease-in-out opacity-85 hover:opacity-100"
               :class="social.color"
           /></a>
         </li>

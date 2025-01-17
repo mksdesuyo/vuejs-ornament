@@ -30,7 +30,7 @@ const projects = [
     link: 'https://mks-ornament.vercel.app/',
     description:
       'A sleek and modern digital store concept designed to showcase and sell creative assets. Featuring a responsive user interface, intuitive navigation, and a vibrant design, the website highlights digital ornaments with engaging visuals. Built using cutting-edge web technologies, it demonstrates an eye for aesthetics and functionality in e-commerce platforms.',
-    techStack: ['HTML', 'CSS', 'JavaScript', 'VueJs', 'Vite'],
+    techStack: ['VueJs', 'Tailwind CSS', 'JavaScript', 'Vite', 'HTML', 'CSS'],
   },
   {
     image: mksSocialsPreviewImage,
@@ -85,8 +85,8 @@ const projects = [
     class="grid gap-2 px-8 pt-2 pb-16 leading-5 h-dvh place-content-center xs:pt-4 md:pt-8 md:px-16 lg:px-48"
   >
     <div>
-      <h1 class="pt-12 mb-2 text-3xl xs:text-4xl sm:text-5xl md:text-6xl">My Projects</h1>
-      <hr class="w-4/5 mb-2 border-2 rounded-md border-gunmetal sm:w-4/6 lg:w-3/6" />
+      <h1 class="pt-12 mb-2 text-3xl sm:text-4xl md:text-5xl">My Projects</h1>
+      <hr class="mb-2 border-2 rounded-md w-52 border-gunmetal md:w-96" />
     </div>
     <div class="pr-2 overflow-y-auto sm:my-4">
       <ProjectCard
@@ -109,7 +109,7 @@ const projects = [
     >
       <div class="relative p-4 bg-white rounded-lg shadow-lg">
         <button
-          class="absolute grid p-1 text-gray-900 bg-gray-400 top-6 right-6 hover:text-red-500"
+          class="absolute grid p-2 text-black bg-gray-300 rounded-sm top-6 right-6 hover:text-red-500"
           @click="closeModal"
         >
           <font-awesome-icon :icon="['fas', 'x']" />

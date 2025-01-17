@@ -3,19 +3,19 @@
     class="grid gap-2 px-8 pt-2 pb-16 leading-5 h-dvh place-content-center xs:pt-4 md:pt-8 md:pb-20 md:px-16 lg:px-48"
   >
     <div>
-      <h1 class="pt-12 mb-2 text-3xl xs:text-4xl sm:text-5xl md:text-6xl">Who I am</h1>
-      <hr class="w-3/5 mb-2 border-2 rounded-md border-gunmetal sm:w-3/6 lg:w-2/6" />
+      <h1 class="pt-12 mb-2 text-3xl sm:text-4xl md:text-5xl">Who I am</h1>
+      <hr class="mb-2 border-2 rounded-md w-44 border-gunmetal md:w-72" />
     </div>
     <div class="pr-2 overflow-y-auto">
-      <p class="text-sm xs:text-base sm:text-xl md:text-2xl">
+      <p class="text-sm xs:text-base sm:text-lg md:text-xl">
         Greetings! I'm Rizqi Muhammad Khatami Sandi, a
         <span class="font-bold">Junior Web Developer</span> certified by BNSP and based in Garut,
         Indonesia.<br />
         With a proper foundation in web development, I specialize in creating
         <span class="font-bold">Front-End</span> solutions using
-        <span class="bg-green-100 px-1 text-[#41B883] rounded-md">VueJs</span> and developing
-        <span class="font-bold">Back-End</span> systems with
-        <span class="px-1 text-[#F05340] bg-red-100 rounded-md">Laravel</span>. <br />
+        <span class="font-bold">VueJs</span> and developing
+        <span class="font-bold">Back-End</span> systems with <span class="font-bold">Laravel</span>.
+        <br />
         <br />
         Beyond coding, I have deep passion for learning new languages and cultures. I can
         communicate in <span class="font-bold">English</span> and
@@ -37,7 +37,7 @@
         I'm eager to collaborate and bring innovative ideas to life in the ever-evolving tech
         industry.
       </p>
-      <div class="flex flex-wrap gap-2 mt-4 text-xs font-bold xs:text-sm sm:text-lg">
+      <div class="flex flex-wrap gap-2 mt-4 text-xs font-bold xs:text-sm sm:text-base">
         <a
           href="https://drive.google.com/file/d/1sK72JqqrcNktKKtfVp3Lg2xclFH34GI3/view?usp=drive_link"
           target="_blank"
