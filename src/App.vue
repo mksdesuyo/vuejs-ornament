@@ -30,7 +30,7 @@ loadTheme();
     leave-active-class="animate-fadeOut"
     mode="out-in"
   >
-    <RouterView />
+    <RouterView :theme-mode="themeMode" />
   </transition>
   <FooterApp />
 </template>

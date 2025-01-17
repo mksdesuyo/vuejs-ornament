@@ -11,17 +11,30 @@ export default {
       colors: {
         gunmetal: '#262c3c',
         lotion: '#fafafa',
-        warm: {
-          bg: '#FDF6E3',
-          text: '#654321',
-        },
+        coffee: '#65532f',
         light: {
-          bg: '#FFFFFF',
-          text: '#000000',
+          bg: "url('/src/assets/crossword.png')",
+          text: '#262c3c',
+          beyond: {
+            color1: '#262c3c',
+            color2: '#fafafa',
+          },
+        },
+        warm: {
+          bg: "url('/src/assets/crossmeteor.png')",
+          text: '#65532f',
+          beyond: {
+            color1: '#65532f',
+            color2: '#f4e8d8',
+          },
         },
         dark: {
-          bg: '#121212',
-          text: '#F5F5F5',
+          bg: "url('/src/assets/blackorchid.png')",
+          text: '#fafafa',
+          beyond: {
+            color1: '#fafafa',
+            color2: '#262c3c',
+          },
         },
       },
       screens: {

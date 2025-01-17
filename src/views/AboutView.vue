@@ -1,10 +1,21 @@
+<script setup>
+defineProps(['themeMode']);
+</script>
+
 <template>
   <main
     class="grid gap-2 px-8 pt-2 pb-16 leading-5 h-dvh place-content-center xs:pt-4 md:pt-8 md:pb-20 md:px-16 lg:px-48"
   >
     <div>
       <h1 class="pt-12 mb-2 text-3xl sm:text-4xl md:text-5xl">Who I am</h1>
-      <hr class="mb-2 border-2 rounded-md w-44 border-gunmetal md:w-72" />
+      <hr
+        class="mb-2 border-2 rounded-md w-44 md:w-72"
+        :class="{
+          'border-light-text': themeMode === 'light',
+          'border-warm-text': themeMode === 'warm',
+          'border-dark-text': themeMode === 'dark',
+        }"
+      />
     </div>
     <div class="pr-2 overflow-y-auto">
       <p class="text-sm xs:text-base sm:text-lg md:text-xl">
@@ -41,12 +52,28 @@
         <a
           href="https://drive.google.com/file/d/1sK72JqqrcNktKKtfVp3Lg2xclFH34GI3/view?usp=drive_link"
           target="_blank"
-          class="p-2 px-4 text-gray-700 transition-all duration-200 ease-in-out border-2 border-gray-700 rounded-lg shadow-md hover:bg-gray-700 hover:text-gray-50"
+          class="p-2 px-4 transition-all duration-200 ease-in-out border-2 rounded-lg shadow-md"
+          :class="{
+            'text-light-beyond-color1 border-light-beyond-color1 hover:bg-light-beyond-color1 hover:text-light-beyond-color2  ':
+              themeMode === 'light',
+            'text-warm-beyond-color1 border-warm-beyond-color1 hover:bg-warm-beyond-color1 hover:text-warm-beyond-color2':
+              themeMode === 'warm',
+            'text-dark-beyond-color1 border-dark-beyond-color1 hover:bg-dark-beyond-color1 hover:text-dark-beyond-color2':
+              themeMode === 'dark',
+          }"
           >Personal CV <font-awesome-icon :icon="['fas', 'download']"
         /></a>
         <router-link
           to="/project"
-          class="p-2 px-4 text-gray-700 transition-all duration-200 ease-in-out border-2 border-gray-700 rounded-lg shadow-md hover:bg-gray-700 hover:text-gray-50"
+          class="p-2 px-4 transition-all duration-200 ease-in-out border-2 rounded-lg shadow-md"
+          :class="{
+            'text-light-beyond-color1 border-light-beyond-color1 hover:bg-light-beyond-color1 hover:text-light-beyond-color2  ':
+              themeMode === 'light',
+            'text-warm-beyond-color1 border-warm-beyond-color1 hover:bg-warm-beyond-color1 hover:text-warm-beyond-color2':
+              themeMode === 'warm',
+            'text-dark-beyond-color1 border-dark-beyond-color1 hover:bg-dark-beyond-color1 hover:text-dark-beyond-color2':
+              themeMode === 'dark',
+          }"
           data-discover="true"
           aria-current="page"
           >See my projects ></router-link
