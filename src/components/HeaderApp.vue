@@ -1,6 +1,6 @@
 <script setup>
 import NavMenu from './NavMenu.vue';
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, defineEmits } from 'vue';
 
 let isMenuOpen = ref(false);
 
@@ -22,6 +22,12 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('click', handleClickOutside);
 });
+
+const emit = defineEmits(['set-theme']);
+
+const handleThemeChange = (theme) => {
+  emit('set-theme', theme);
+};
 </script>
 
 <template>
@@ -35,6 +41,26 @@ onUnmounted(() => {
         >MKS.proc</router-link
       >
       <div class="flex items-center">
+        <div class="flex gap-2">
+          <button
+            class="px-4 py-2 rounded bg-light-bg text-light-text"
+            @click="handleThemeChange('light')"
+          >
+            Light
+          </button>
+          <button
+            class="px-4 py-2 rounded bg-warm-bg text-warm-text"
+            @click="handleThemeChange('warm')"
+          >
+            Warm
+          </button>
+          <button
+            class="px-4 py-2 rounded bg-dark-bg text-dark-text"
+            @click="handleThemeChange('dark')"
+          >
+            Dark
+          </button>
+        </div>
         <button @click="toggleMenu" id="menuButton" class="grid w-auto lg:hidden">
           <font-awesome-icon
             :icon="isMenuOpen ? ['fas', 'x'] : ['fas', 'bars']"

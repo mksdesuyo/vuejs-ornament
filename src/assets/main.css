@@ -28,3 +28,24 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.light {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+  background-color: theme('colors.light.bg');
+  color: theme('colors.light.text');
+}
+
+.warm {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+  background-color: theme('colors.warm.bg');
+  color: theme('colors.warm.text');
+}
+
+.dark {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+  background-color: theme('colors.dark.bg');
+  color: theme('colors.dark.text');
+}

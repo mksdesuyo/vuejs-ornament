@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  darkMode: 'selector',
   theme: {
     extend: {
       backgroundImage: {
@@ -10,6 +11,18 @@ export default {
       colors: {
         gunmetal: '#262c3c',
         lotion: '#fafafa',
+        warm: {
+          bg: '#FDF6E3',
+          text: '#654321',
+        },
+        light: {
+          bg: '#FFFFFF',
+          text: '#000000',
+        },
+        dark: {
+          bg: '#121212',
+          text: '#F5F5F5',
+        },
       },
       screens: {
         xs: '360px',

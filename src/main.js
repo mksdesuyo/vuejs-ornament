@@ -30,6 +30,9 @@ library.add(
   faFaceGrinWink,
 );
 
+const savedTheme = localStorage.getItem('theme-mode') || 'light';
+document.documentElement.className = savedTheme;
+
 const app = createApp(App);
 
 app.component('font-awesome-icon', FontAwesomeIcon);
