@@ -33,7 +33,7 @@
         target="_blank"
         rel="noreferrer noopener"
         class="px-4 py-2 text-xs font-bold text-gray-700 transition-all duration-200 ease-in-out border-2 border-gray-700 rounded-lg shadow-md w-fit hover:bg-gray-700 hover:text-gray-50 xs:text-sm sm:text-base"
-        >View Demo <font-awesome-icon :icon="['fas', 'arrow-up-right-from-square']"
+        >{{ demo }} <font-awesome-icon :icon="icon"
       /></a>
     </footer>
     <hr class="border-gray-500" />
@@ -58,7 +58,7 @@ export default {
     },
     link: {
       type: String,
-      default: '#',
+      default: null,
     },
     description: {
       type: Object,
@@ -68,22 +68,31 @@ export default {
       type: Array,
       required: true,
     },
+    demo: {
+      type: String,
+      default: 'View Demo',
+    },
+    icon: {
+      type: Array,
+      default: () => ['fas', 'arrow-up-right-from-square'],
+    },
   },
   methods: {
     getBadgeClass(tech) {
       const techClasses = {
-        HTML: ['bg-orange-100', 'text-orange-700'],
-        CSS: ['bg-blue-100', 'text-blue-700'],
-        JavaScript: ['bg-yellow-100', 'text-yellow-700'],
-        Sass: ['bg-pink-100', 'text-pink-700'],
-        Bootstrap: ['bg-purple-100', 'text-purple-700'],
-        Leaflet: ['bg-lime-100', 'text-lime-700'],
-        VueJs: ['bg-green-100', 'text-green-700'],
-        Svelte: ['bg-orange-100', 'text-orange-700'],
-        Vite: ['bg-purple-700', 'text-yellow-300'],
-        'Tailwind CSS': ['bg-sky-100', 'text-sky-700'],
+        HTML: ['bg-[#e34c26]', 'text-lotion'],
+        CSS: ['bg-[#3C99DC]', 'text-lotion'],
+        JavaScript: ['bg-[#F0DB4F]', 'text-gunmetal'],
+        SASS: ['bg-[#CD6799]', 'text-lotion'],
+        SCSS: ['bg-[#CD6799]', 'text-lotion'],
+        Bootstrap: ['bg-[#6f2cf5]', 'text-lotion'],
+        Leaflet: ['bg-[#b1de5d]', 'text-gunmetal'],
+        VueJs: ['bg-[#41B883]', 'text-lotion'],
+        Svelte: ['bg-[#ff3d00]', 'text-lotion'],
+        Vite: ['bg-[#9675ce]', 'text-[#fac02e]'],
+        'Tailwind CSS': ['bg-[#38bdf8]', 'text-lotion'],
       };
-      return techClasses[tech] || ['bg-gray-500', 'text-white'];
+      return techClasses[tech] || ['bg-gray-500', 'text-lotion'];
     },
   },
 };

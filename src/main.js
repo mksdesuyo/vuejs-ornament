@@ -13,6 +13,7 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faX } from '@fortawesome/free-solid-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faFaceGrinWink } from '@fortawesome/free-regular-svg-icons';
 
 library.add(
   faHeart,
@@ -24,6 +25,7 @@ library.add(
   faBars,
   faX,
   faDownload,
+  faFaceGrinWink,
 );
 
 const app = createApp(App);

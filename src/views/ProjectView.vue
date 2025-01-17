@@ -27,10 +27,11 @@ const projects = [
     image: mksOrnamentV2previewImage,
     title: 'MKS Ornament v2.0.0: Portfolio Website',
     project_type: 'Personal Project',
-    link: 'https://mks-ornament.vercel.app/',
     description:
       'A sleek and modern digital store concept designed to showcase and sell creative assets. Featuring a responsive user interface, intuitive navigation, and a vibrant design, the website highlights digital ornaments with engaging visuals. Built using cutting-edge web technologies, it demonstrates an eye for aesthetics and functionality in e-commerce platforms.',
     techStack: ['VueJs', 'Tailwind CSS', 'JavaScript', 'Vite', 'HTML', 'CSS'],
+    demo: 'You are on the page right now',
+    icon: ['far', 'face-grin-wink'],
   },
   {
     image: mksSocialsPreviewImage,
@@ -39,7 +40,7 @@ const projects = [
     link: 'https://mks-socials.vercel.app/',
     description:
       'A minimalist and user-friendly personal link hub inspired by platforms like Linktree. The website centralizes key social media and professional links in one accessible location. Crafted with Svelte and Tailwind CSS, it emphasizes responsive design and interactive elements to deliver a seamless user experience.',
-    techStack: ['HTML', 'CSS', 'JavaScript', 'Svelte'],
+    techStack: ['Svelte', 'Tailwind CSS', 'JavaScript', 'Vite', 'HTML', 'CSS'],
   },
   {
     image: doistPreviewImage,
@@ -48,7 +49,7 @@ const projects = [
     link: 'https://mks-todolist.netlify.app/',
     description:
       "A simple yet functional to-do list web application, developed independently using insights and guidance from Dicoding Academy's class modules.",
-    techStack: ['HTML', 'CSS', 'JavaScript', 'Sass'],
+    techStack: ['CSS', 'JavaScript', 'SCSS', 'HTML'],
   },
   {
     image: mksOrnamentV1PreviewImage,
@@ -66,7 +67,7 @@ const projects = [
     link: 'https://close-weather-map.netlify.app/',
     description:
       'A straightforward web page for checking weather conditions and exploring maps, collaboratively built with a teammate during the SIB Hacktiv8 x Kampus Merdeka program.',
-    techStack: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Leaflet'],
+    techStack: ['HTML', 'Bootstrap', 'JavaScript', 'CSS', 'Leaflet'],
   },
   {
     image: aiticampPreviewImage,
@@ -75,7 +76,7 @@ const projects = [
     link: 'https://aiticamp.netlify.app/',
     description:
       'A clean and minimalistic landing page created as part of a collaborative project with a teammate during the SIB Hacktiv8 x Kampus Merdeka program.',
-    techStack: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+    techStack: ['HTML', 'Bootstrap', 'CSS', 'JavaScript'],
   },
 ];
 </script>
@@ -98,6 +99,8 @@ const projects = [
         :link="project.link"
         :description="project.description"
         :techStack="project.techStack"
+        :demo="project.demo"
+        :icon="project.icon"
         @image-clicked="openModal"
       />
     </div>
