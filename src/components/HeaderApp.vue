@@ -1,5 +1,27 @@
 <script setup>
 import NavMenu from './NavMenu.vue';
+import { ref, onMounted, onUnmounted } from 'vue';
+
+let isMenuOpen = ref(false);
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+};
+
+const handleClickOutside = (event) => {
+  const menu = document.getElementById('menuButton');
+  if (menu && !menu.contains(event.target)) {
+    isMenuOpen.value = false;
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('click', handleClickOutside);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('click', handleClickOutside);
+});
 </script>
 
 <template>
@@ -13,24 +35,14 @@ import NavMenu from './NavMenu.vue';
         >MKS.proc</router-link
       >
       <div class="flex items-center">
-        <button @click="isOpen = !isOpen" class="grid w-auto lg:hidden">
+        <button @click="toggleMenu" id="menuButton" class="grid w-auto lg:hidden">
           <font-awesome-icon
-            :icon="isOpen ? ['fas', 'x'] : ['fas', 'bars']"
+            :icon="isMenuOpen ? ['fas', 'x'] : ['fas', 'bars']"
             class="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5"
           />
         </button>
-        <NavMenu :class="[isOpen ? 'right-8 md:right-16' : '-right-full']" />
+        <NavMenu :class="[isMenuOpen ? 'right-8 md:right-16' : '-right-full']" />
       </div>
     </nav>
   </header>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      isOpen: false,
-    };
-  },
-};
-</script>
