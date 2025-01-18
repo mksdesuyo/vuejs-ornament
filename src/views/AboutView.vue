@@ -54,7 +54,7 @@ defineProps(['themeMode']);
           target="_blank"
           class="p-2 px-4 transition-all duration-200 ease-in-out border-2 rounded-lg shadow-md"
           :class="{
-            'text-light-beyond-color1 border-light-beyond-color1 hover:bg-light-beyond-color1 hover:text-light-beyond-color2  ':
+            'text-light-beyond-color1 border-light-beyond-color1 hover:bg-light-beyond-color1 hover:text-light-beyond-color2':
               themeMode === 'light',
             'text-warm-beyond-color1 border-warm-beyond-color1 hover:bg-warm-beyond-color1 hover:text-warm-beyond-color2':
               themeMode === 'warm',

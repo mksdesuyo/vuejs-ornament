@@ -30,7 +30,7 @@ const projects = [
     title: 'MKS Ornament v2.0.0: Portfolio Website',
     project_type: 'Personal Project',
     description:
-      'A sleek and modern digital store concept designed to showcase and sell creative assets. Featuring a responsive user interface, intuitive navigation, and a vibrant design, the website highlights digital ornaments with engaging visuals. Built using cutting-edge web technologies, it demonstrates an eye for aesthetics and functionality in e-commerce platforms.',
+      'A sleek portfolio website designed to showcase creative assets. Featuring a responsive user interface, intuitive navigation, and a vibrant design. Built using cutting-edge web technologies, it demonstrates an eye for aesthetics and functionality in portfolio website.',
     techStack: ['VueJs', 'Tailwind CSS', 'JavaScript', 'Vite', 'HTML', 'CSS'],
     demo: 'You are on the page right now',
     icon: ['far', 'face-grin-wink'],
@@ -59,7 +59,7 @@ const projects = [
     project_type: 'Personal Project',
     link: 'https://mksdesuyo.github.io/',
     description:
-      'An interactive portfolio website showcasing personal projects, technical skills, and professional experiences. With a clean and professional layout, it highlights a passion for web development and design. Fully responsive and hosted on GitHub Pages, this site serves as a dynamic resume and an entry point for networking opportunities.',
+      'An interactive portfolio website showcasing personal projects, technical skills, and professional experiences. With a clean and professional layout, it highlights a passion for web development and design.',
     techStack: ['HTML', 'CSS', 'JavaScript'],
   },
   {
@@ -138,7 +138,7 @@ const projects = [
       class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
       @click.self="closeModal"
     >
-      <div class="relative p-4 bg-white rounded-lg shadow-lg">
+      <div class="relative p-4 bg-gray-200 rounded-lg shadow-lg">
         <button
           class="absolute grid p-2 text-black bg-gray-300 rounded-sm top-6 right-6 hover:text-red-500"
           @click="closeModal"
