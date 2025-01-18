@@ -9,7 +9,7 @@ defineProps(['themeMode']);
     <div>
       <h1 class="pt-12 mb-2 text-3xl sm:text-4xl md:text-5xl">Who I am</h1>
       <hr
-        class="mb-2 border-2 rounded-md w-44 md:w-72"
+        class="mb-2 border-2 rounded-md w-44 md:w-72 transition-all duration-500"
         :class="{
           'border-light-text': themeMode === 'light',
           'border-warm-text': themeMode === 'warm',

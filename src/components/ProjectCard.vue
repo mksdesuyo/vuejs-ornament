@@ -28,13 +28,7 @@
           {{ tech }}
         </li>
       </ul>
-      <a
-        :href="link"
-        target="_blank"
-        rel="noreferrer noopener"
-        class="px-4 py-2 text-xs font-bold text-gray-700 transition-all duration-200 ease-in-out border-2 border-gray-700 rounded-lg shadow-md w-fit hover:bg-gray-700 hover:text-gray-50 xs:text-sm sm:text-base"
-        >{{ demo }} <font-awesome-icon :icon="icon"
-      /></a>
+      <slot name="linkButton"></slot>
     </footer>
     <hr class="border-gray-500" />
   </div>
@@ -67,14 +61,6 @@ export default {
     techStack: {
       type: Array,
       required: true,
-    },
-    demo: {
-      type: String,
-      default: 'View Demo',
-    },
-    icon: {
-      type: Array,
-      default: () => ['fas', 'arrow-up-right-from-square'],
     },
   },
   methods: {

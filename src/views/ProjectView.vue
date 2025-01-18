@@ -9,6 +9,8 @@ import mksOrnamentV2previewImage from '@/assets/mks-ornament-v2_0_0-preview.png'
 
 import { ref } from 'vue';
 
+defineProps(['theme-mode']);
+
 const isModalOpen = ref(false);
 const currentImage = ref(null);
 
@@ -87,7 +89,14 @@ const projects = [
   >
     <div>
       <h1 class="pt-12 mb-2 text-3xl sm:text-4xl md:text-5xl">My Projects</h1>
-      <hr class="mb-2 border-2 rounded-md w-52 border-gunmetal md:w-96" />
+      <hr
+        class="mb-2 border-2 rounded-md w-56 md:w-96 transition-all duration-500"
+        :class="{
+          'border-light-text': themeMode === 'light',
+          'border-warm-text': themeMode === 'warm',
+          'border-dark-text': themeMode === 'dark',
+        }"
+      />
     </div>
     <div class="pr-2 overflow-y-auto sm:my-4">
       <ProjectCard
@@ -102,7 +111,26 @@ const projects = [
         :demo="project.demo"
         :icon="project.icon"
         @image-clicked="openModal"
-      />
+      >
+        <template #linkButton>
+          <a
+            :href="project.link"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="px-4 py-2 text-xs font-bold transition-all duration-200 ease-in-out border-2 rounded-lg shadow-md w-fit xs:text-sm sm:text-base"
+            :class="{
+              'text-light-beyond-color1 border-light-beyond-color1 hover:bg-light-beyond-color1 hover:text-light-beyond-color2  ':
+                themeMode === 'light',
+              'text-warm-beyond-color1 border-warm-beyond-color1 hover:bg-warm-beyond-color1 hover:text-warm-beyond-color2':
+                themeMode === 'warm',
+              'text-dark-beyond-color1 border-dark-beyond-color1 hover:bg-dark-beyond-color1 hover:text-dark-beyond-color2':
+                themeMode === 'dark',
+            }"
+            >{{ project.demo ?? 'View Demo' }}
+            <font-awesome-icon :icon="project.icon ?? ['fas', 'arrow-up-right-from-square']"
+          /></a>
+        </template>
+      </ProjectCard>
     </div>
 
     <div

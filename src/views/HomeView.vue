@@ -1,5 +1,6 @@
 <script setup>
 import RLButton from '../components/RouterLinkBtn.vue';
+defineProps(['theme-mode']);
 </script>
 
 <template>
@@ -19,7 +20,20 @@ import RLButton from '../components/RouterLinkBtn.vue';
     <div
       class="flex flex-wrap items-center pb-2 mt-2 text-xs font-bold gap-x-2 gap-y-2 xs:text-sm sm:text-base"
     >
-      <RLButton v-for="link in links" :key="link.text" :text="link.text" :to="link.path" />
+      <RLButton
+        v-for="link in links"
+        :key="link.text"
+        :text="link.text"
+        :to="link.path"
+        :class="{
+          'text-light-beyond-color1 border-light-beyond-color1 hover:bg-light-beyond-color1 hover:text-light-beyond-color2  ':
+            themeMode === 'light',
+          'text-warm-beyond-color1 border-warm-beyond-color1 hover:bg-warm-beyond-color1 hover:text-warm-beyond-color2':
+            themeMode === 'warm',
+          'text-dark-beyond-color1 border-dark-beyond-color1 hover:bg-dark-beyond-color1 hover:text-dark-beyond-color2':
+            themeMode === 'dark',
+        }"
+      />
     </div>
   </main>
 </template>

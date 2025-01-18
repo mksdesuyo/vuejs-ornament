@@ -28,6 +28,8 @@ const emit = defineEmits(['set-theme']);
 const handleThemeChange = (theme) => {
   emit('set-theme', theme);
 };
+
+defineProps(['theme-mode']);
 </script>
 
 <template>
@@ -41,23 +43,22 @@ const handleThemeChange = (theme) => {
         >MKS.proc</router-link
       >
       <div class="flex items-center">
-        <div class="flex gap-2">
+        <div class="flex gap-4 px-2">
           <button
-            class="px-4 py-2 rounded bg-light-bg text-light-text"
+            class="rounded bg-light-bg text-light-text"
+            :class="{
+              'border-light-text': themeMode === 'light',
+              'border-warm-text': themeMode === 'warm',
+              'border-dark-text': themeMode === 'dark',
+            }"
             @click="handleThemeChange('light')"
           >
             Light
           </button>
-          <button
-            class="px-4 py-2 rounded bg-warm-bg text-warm-text"
-            @click="handleThemeChange('warm')"
-          >
+          <button class="rounded bg-warm-bg text-warm-text" @click="handleThemeChange('warm')">
             Warm
           </button>
-          <button
-            class="px-4 py-2 rounded bg-dark-bg text-dark-text"
-            @click="handleThemeChange('dark')"
-          >
+          <button class="rounded bg-dark-bg text-dark-text" @click="handleThemeChange('dark')">
             Dark
           </button>
         </div>
