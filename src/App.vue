@@ -24,7 +24,7 @@ loadTheme();
 </script>
 
 <template>
-  <HeaderApp @set-theme="setTheme" />
+  <HeaderApp @set-theme="setTheme" :theme-mode="themeMode" />
   <transition
     enter-active-class="animate-fadeIn"
     leave-active-class="animate-fadeOut"

@@ -4,35 +4,28 @@ export default {
   darkMode: 'selector',
   theme: {
     extend: {
-      backgroundImage: {
-        crossword: "url('/src/assets/crossword.png')",
-        blackorchid: "url('/src/assets/blackorchid.png')",
-      },
       colors: {
-        gunmetal: '#262c3c',
-        lotion: '#fafafa',
-        coffee: '#65532f',
         light: {
-          bg: "url('/src/assets/crossword.png')",
+          bg: "url('/src/assets/fabric.png')",
           text: '#262c3c',
           beyond: {
             color1: '#262c3c',
-            color2: '#fafafa',
+            color2: '#EBE6E6',
           },
         },
         warm: {
           bg: "url('/src/assets/crossmeteor.png')",
-          text: '#65532f',
+          text: '#51401F',
           beyond: {
-            color1: '#65532f',
+            color1: '#51401F',
             color2: '#f4e8d8',
           },
         },
         dark: {
-          bg: "url('/src/assets/blackorchid.png')",
-          text: '#fafafa',
+          bg: "url('/src/assets/denim.png')",
+          text: '#EBE6E6',
           beyond: {
-            color1: '#fafafa',
+            color1: '#EBE6E6',
             color2: '#262c3c',
           },
         },

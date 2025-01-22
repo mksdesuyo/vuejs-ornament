@@ -1,8 +1,13 @@
 <script setup>
 import NavMenu from './NavMenu.vue';
-import { ref, onMounted, onUnmounted, defineEmits } from 'vue';
+import { ref, onMounted, onUnmounted, watch } from 'vue';
 
-let isMenuOpen = ref(false);
+const isMenuOpen = ref(false);
+
+const props = defineProps(['themeMode']);
+const emit = defineEmits(['set-theme']);
+
+const selectedTheme = ref(props.themeMode);
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
@@ -23,11 +28,17 @@ onUnmounted(() => {
   window.removeEventListener('click', handleClickOutside);
 });
 
-const emit = defineEmits(['set-theme']);
-
 const handleThemeChange = (theme) => {
+  selectedTheme.value = theme;
   emit('set-theme', theme);
 };
+
+watch(
+  () => props.themeMode,
+  (newMode) => {
+    selectedTheme.value = newMode;
+  },
+);
 </script>
 
 <template>
@@ -40,13 +51,29 @@ const handleThemeChange = (theme) => {
         aria-current="page"
         >MKS.proc</router-link
       >
-      <div class="flex items-center">
-        <div class="flex gap-4 pr-4">
-          <button class="rounded bg-light-bg" @click="handleThemeChange('light')">Light</button>
-          <button class="rounded bg-warm-bg" @click="handleThemeChange('warm')">Warm</button>
-          <button class="rounded bg-dark-bg" @click="handleThemeChange('dark')">Dark</button>
+      <div class="flex items-center gap-1 xs:gap-2 lg:gap-4 lg:flex-row-reverse">
+        <div class="flex text-xs md:text-sm items-center whitespace-nowrap xs:mt-1 lg:mt-0">
+          <label for="themeSwitcher" class="opacity-75">Select theme:&nbsp;</label>
+          <select
+            id="themeSwitcher"
+            v-model="selectedTheme"
+            @change="handleThemeChange(selectedTheme)"
+            class="bg-transparent rounded-md border-2"
+            :class="{
+              'text-light-text border-light-beyond-color1 focus:bg-light-beyond-color2':
+                themeMode === 'light',
+              'text-warm-text border-warm-beyond-color1 focus:bg-warm-beyond-color2':
+                themeMode === 'warm',
+              'text-dark-text border-dark-beyond-color1 focus:bg-dark-beyond-color2':
+                themeMode === 'dark',
+            }"
+          >
+            <option value="light">Light</option>
+            <option value="warm">Warm</option>
+            <option value="dark">Dark</option>
+          </select>
         </div>
-        <button @click="toggleMenu" id="menuButton" class="grid w-auto lg:hidden">
+        <button @click="toggleMenu" id="menuButton" class="grid w-auto xs:mt-1 lg:hidden">
           <font-awesome-icon
             :icon="isMenuOpen ? ['fas', 'x'] : ['fas', 'bars']"
             class="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5"
