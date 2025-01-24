@@ -66,17 +66,17 @@ export default {
   methods: {
     getBadgeClass(tech) {
       const techClasses = {
-        HTML: ['bg-[#e34c26]', 'text-lotion'],
-        CSS: ['bg-[#3C99DC]', 'text-lotion'],
-        JavaScript: ['bg-[#F0DB4F]', 'text-gunmetal'],
-        SASS: ['bg-[#CD6799]', 'text-lotion'],
-        SCSS: ['bg-[#CD6799]', 'text-lotion'],
-        Bootstrap: ['bg-[#6f2cf5]', 'text-lotion'],
-        Leaflet: ['bg-[#b1de5d]', 'text-gunmetal'],
-        VueJs: ['bg-[#41B883]', 'text-lotion'],
-        Svelte: ['bg-[#ff3d00]', 'text-lotion'],
+        HTML: ['bg-[#e34c26]', 'text-[#E9E2E2]'],
+        CSS: ['bg-[#3C99DC]', 'text-[#E9E2E2]'],
+        JavaScript: ['bg-[#F0DB4F]', 'text-[#51401F]'],
+        SASS: ['bg-[#CD6799]', 'text-[#E9E2E2]'],
+        SCSS: ['bg-[#CD6799]', 'text-[#E9E2E2]'],
+        Bootstrap: ['bg-[#6f2cf5]', 'text-[#E9E2E2]'],
+        Leaflet: ['bg-[#b1de5d]', '#51401F'],
+        VueJs: ['bg-[#41B883]', 'text-[#E9E2E2]'],
+        Svelte: ['bg-[#ff3d00]', 'text-[#E9E2E2]'],
         Vite: ['bg-[#9675ce]', 'text-[#fac02e]'],
-        'Tailwind CSS': ['bg-[#38bdf8]', 'text-lotion'],
+        'Tailwind CSS': ['bg-[#38bdf8]', 'text-[#E9E2E2]'],
       };
       return techClasses[tech] || ['bg-gray-500', 'text-lotion'];
     },
