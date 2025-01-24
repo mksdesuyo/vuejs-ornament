@@ -52,13 +52,13 @@ watch(
         >MKS.proc</router-link
       >
       <div class="flex items-center gap-1 xs:gap-2 lg:gap-4 lg:flex-row-reverse">
-        <div class="flex text-xs md:text-sm items-center whitespace-nowrap xs:mt-1 lg:mt-0">
+        <div class="flex items-center text-xs md:text-sm whitespace-nowrap xs:mt-1 lg:mt-0">
           <label for="themeSwitcher" class="opacity-75">Select theme:&nbsp;</label>
           <select
             id="themeSwitcher"
             v-model="selectedTheme"
             @change="handleThemeChange(selectedTheme)"
-            class="bg-transparent rounded-md border-2"
+            class="bg-transparent border-2 rounded-md"
             :class="{
               'text-light-text border-light-beyond-color1 focus:bg-light-beyond-color2':
                 themeMode === 'light',
@@ -79,7 +79,10 @@ watch(
             class="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5"
           />
         </button>
-        <NavMenu :class="[isMenuOpen ? 'right-8 md:right-16' : '-right-full']" />
+        <NavMenu
+          :theme-mode="themeMode"
+          :class="[isMenuOpen ? 'right-8 md:right-16' : '-right-full']"
+        />
       </div>
     </nav>
   </header>

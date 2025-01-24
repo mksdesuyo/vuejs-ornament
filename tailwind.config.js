@@ -10,7 +10,7 @@ export default {
           text: '#262c3c',
           beyond: {
             color1: '#262c3c',
-            color2: '#EBE6E6',
+            color2: '#dcdcdb',
           },
         },
         warm: {
@@ -26,7 +26,7 @@ export default {
           text: '#EBE6E6',
           beyond: {
             color1: '#EBE6E6',
-            color2: '#262c3c',
+            color2: '#444851',
           },
         },
       },
