@@ -72,7 +72,7 @@ export default {
         SASS: ['bg-[#CD6799]', 'text-[#E9E2E2]'],
         SCSS: ['bg-[#CD6799]', 'text-[#E9E2E2]'],
         Bootstrap: ['bg-[#6f2cf5]', 'text-[#E9E2E2]'],
-        Leaflet: ['bg-[#b1de5d]', '#51401F'],
+        Leaflet: ['bg-[#b1de5d]', 'text-[#51401F]'],
         VueJs: ['bg-[#41B883]', 'text-[#E9E2E2]'],
         Svelte: ['bg-[#ff3d00]', 'text-[#E9E2E2]'],
         Vite: ['bg-[#9675ce]', 'text-[#fac02e]'],
