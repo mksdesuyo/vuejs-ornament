@@ -1,4 +1,5 @@
 <script setup>
+import RLButton from '../components/RouterLinkBtn.vue';
 defineProps(['themeMode']);
 </script>
 
@@ -9,7 +10,7 @@ defineProps(['themeMode']);
     <div>
       <h1 class="pt-12 mb-2 text-3xl sm:text-4xl md:text-5xl">Who I am</h1>
       <hr
-        class="mb-2 border-2 rounded-md w-44 md:w-72 transition-all duration-500"
+        class="mb-2 transition-all duration-500 border-2 rounded-md w-44 md:w-72"
         :class="{
           'border-light-text': themeMode === 'light',
           'border-warm-text': themeMode === 'warm',
@@ -63,9 +64,11 @@ defineProps(['themeMode']);
           }"
           >Personal CV <font-awesome-icon :icon="['fas', 'download']"
         /></a>
-        <router-link
-          to="/project"
-          class="p-2 px-4 transition-all duration-200 ease-in-out border-2 rounded-lg shadow-md"
+        <RLButton
+          v-for="link in links"
+          :key="link.text"
+          :text="link.text"
+          :to="link.path"
           :class="{
             'text-light-beyond-color1 border-light-beyond-color1 hover:bg-light-beyond-color1 hover:text-light-beyond-color2  ':
               themeMode === 'light',
@@ -74,11 +77,18 @@ defineProps(['themeMode']);
             'text-dark-beyond-color1 border-dark-beyond-color1 hover:bg-dark-beyond-color1 hover:text-dark-beyond-color2':
               themeMode === 'dark',
           }"
-          data-discover="true"
-          aria-current="page"
-          >See my projects ></router-link
-        >
+        />
       </div>
     </div>
   </main>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      links: [{ text: 'See my projects >', path: '/project' }],
+    };
+  },
+};
+</script>
