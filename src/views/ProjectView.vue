@@ -6,6 +6,7 @@ import aiticampPreviewImage from '@/assets/aiticamp-preview.png';
 import mksOrnamentV1PreviewImage from '@/assets/mks-ornament-v1_0_0-preview.png';
 import mksSocialsPreviewImage from '@/assets/mks-socials-preview.png';
 import mksOrnamentV2previewImage from '@/assets/mks-ornament-v2_0_0-preview.png';
+import curatedByMKSPreviewImage from '@/assets/curated-by-mks-preview.png'
 
 import { ref } from 'vue';
 
@@ -34,6 +35,15 @@ const projects = [
     techStack: ['VueJs', 'Tailwind CSS', 'JavaScript', 'Vite', 'HTML', 'CSS'],
     demo: 'You are on the page right now',
     icon: ['far', 'face-grin-wink'],
+  },
+  {
+    image: curatedByMKSPreviewImage,
+    title: 'Curated By MKS: Personal Blog',
+    link: 'https://mksdesuyo.github.io/mks-writing/',
+    project_type: 'Personal Project',
+    description:
+      "A minimalist and user-friendly personal blog. This site will be the main platform where I store everything that I've learned so far, for the sake of solidifying my knowledge. Crafted with Ruby, Jekyll, and Github Pages, it brings a rather minimalist input but pretty decent output.",
+    techStack: ['Jekyll', 'Ruby', 'Giscus'],
   },
   {
     image: mksSocialsPreviewImage,

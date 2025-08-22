@@ -77,6 +77,9 @@ export default {
         Svelte: ['bg-[#ff3d00]', 'text-[#E9E2E2]'],
         Vite: ['bg-[#9675ce]', 'text-[#fac02e]'],
         'Tailwind CSS': ['bg-[#38bdf8]', 'text-[#E9E2E2]'],
+        Jekyll: ['bg-[#57585A]', 'text-[#E9E2E2]'],
+        Ruby: ['bg-[#AC1401]', 'text-[#E9E2E2]'],
+        Giscus: ['bg-[#8CCAF7]', 'text-[#51401F]']
       };
       return techClasses[tech] || ['bg-gray-500', 'text-lotion'];
     },
