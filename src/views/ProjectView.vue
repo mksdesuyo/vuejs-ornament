@@ -55,15 +55,6 @@ const projects = [
     techStack: ['Svelte', 'Tailwind CSS', 'JavaScript', 'Vite', 'HTML', 'CSS'],
   },
   {
-    image: doistPreviewImage,
-    title: 'DOIST: Simple To-Do List Web Application',
-    project_type: 'Personal Project',
-    link: 'https://mks-todolist.netlify.app/',
-    description:
-      "A simple yet functional to-do list web application, developed independently using insights and guidance from Dicoding Academy's class modules.",
-    techStack: ['CSS', 'JavaScript', 'SCSS', 'HTML'],
-  },
-  {
     image: mksOrnamentV1PreviewImage,
     title: 'MKS Ornament v1.0.0: Portfolio Website',
     project_type: 'Personal Project',
@@ -78,8 +69,17 @@ const projects = [
     project_type: 'Team Project',
     link: 'https://close-weather-map.netlify.app/',
     description:
-      'A straightforward web page for checking weather conditions and exploring maps, collaboratively built with a teammate during the SIB Hacktiv8 x Kampus Merdeka program.',
+      'A straightforward web page for checking weather conditions and exploring maps, collaboratively built with a teammate during the SIB Hacktiv8 x Kampus Merdeka program. Utilizing Leaflet map.',
     techStack: ['HTML', 'Bootstrap', 'JavaScript', 'CSS', 'Leaflet'],
+  },
+  {
+    image: doistPreviewImage,
+    title: 'DOIST: Simple To-Do List Web Application',
+    project_type: 'Personal Project',
+    link: 'https://mks-todolist.netlify.app/',
+    description:
+      "A simple yet functional to-do list web application, developed independently using insights and guidance from Dicoding Academy's class modules. Utilizing local storage.",
+    techStack: ['CSS', 'JavaScript', 'SCSS', 'HTML'],
   },
   {
     image: aiticampPreviewImage,
