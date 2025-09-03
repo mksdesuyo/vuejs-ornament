@@ -51,7 +51,7 @@ defineProps(['themeMode']);
       </p>
       <div class="flex flex-wrap gap-2 mt-4 text-xs font-bold xs:text-sm sm:text-base">
         <a
-          href="https://drive.google.com/file/d/1sK72JqqrcNktKKtfVp3Lg2xclFH34GI3/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1mhe8LnpmpmGAlvEtIakE3mWBopo7f6yQ/view?usp=sharing"
           target="_blank"
           class="p-2 px-4 transition-all duration-200 ease-in-out border-2 rounded-lg shadow-md"
           :class="{
@@ -62,7 +62,21 @@ defineProps(['themeMode']);
             'text-dark-beyond-color1 border-dark-beyond-color1 hover:bg-dark-beyond-color1 hover:text-dark-beyond-color2':
               themeMode === 'dark',
           }"
-          >Personal CV <font-awesome-icon :icon="['fas', 'download']"
+          >Personal CV (Indonesia) <font-awesome-icon :icon="['fas', 'download']"
+        /></a>
+        <a
+          href="https://drive.google.com/file/d/1W9jIlxDXaog8HtcSy8Mjmek_C3c_t-sA/view?usp=sharing"
+          target="_blank"
+          class="p-2 px-4 transition-all duration-200 ease-in-out border-2 rounded-lg shadow-md"
+          :class="{
+            'text-light-beyond-color1 border-light-beyond-color1 hover:bg-light-beyond-color1 hover:text-light-beyond-color2':
+              themeMode === 'light',
+            'text-warm-beyond-color1 border-warm-beyond-color1 hover:bg-warm-beyond-color1 hover:text-warm-beyond-color2':
+              themeMode === 'warm',
+            'text-dark-beyond-color1 border-dark-beyond-color1 hover:bg-dark-beyond-color1 hover:text-dark-beyond-color2':
+              themeMode === 'dark',
+          }"
+          >Personal CV (English) <font-awesome-icon :icon="['fas', 'download']"
         /></a>
         <RLButton
           v-for="link in links"
