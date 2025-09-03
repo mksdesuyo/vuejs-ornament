@@ -9,13 +9,11 @@ defineProps(['theme-mode']);
     <h1 class="text-3xl font-bold leading-8 tracking-wider xs:text-4xl sm:text-6xl md:text-7xl">
       Rizqi MKS
     </h1>
-    <h2 class="text-base font-bold opacity-75 xs:text-lg sm:text-2xl md:text-3xl">
-      An enthusiastic fresher in web development
+    <h2 class="relative font-bold uppercase tracking-wide text-base xs:text-lg sm:text-2xl md:text-3xl glitch" data-text="Junior Web Developer | Mentor | Cloud Enthusiast">
+      Junior Web Developer | Mentor | Cloud Enthusiast
     </h2>
     <p class="mt-1 text-sm xs:text-base sm:text-lg md:text-xl">
-      I'm a Junior Web Developer based in Garut, Indonesia. Currently focusing on Front-End using
-      <span class="font-bold">VueJs</span> and Back-End using
-      <span class="font-bold">Laravel</span>.
+      A tech-savvy and adaptable web developer based in Garut, Indonesia. Skilled in Front-End (Vue.js, Tailwind) and Back-End (Laravel, Node.js), with experience mentoring 100+ national participants through Kampus Merdeka and Google Cloud programs.
     </p>
     <div
       class="flex flex-wrap items-center pb-2 mt-2 text-xs font-bold gap-x-2 gap-y-2 xs:text-sm sm:text-base"

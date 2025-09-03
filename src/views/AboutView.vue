@@ -51,7 +51,7 @@ defineProps(['themeMode']);
       </p>
       <div class="flex flex-wrap gap-2 mt-4 text-xs font-bold xs:text-sm sm:text-base">
         <a
-          href="https://drive.google.com/file/d/1mhe8LnpmpmGAlvEtIakE3mWBopo7f6yQ/view?usp=sharing"
+          href="https://docs.google.com/document/d/1wD7LASIvAAxlM4rEyxPeO7c9KG3zbG3RbqYopPVT8gE/edit?usp=sharing"
           target="_blank"
           class="p-2 px-4 transition-all duration-200 ease-in-out border-2 rounded-lg shadow-md"
           :class="{
@@ -65,7 +65,7 @@ defineProps(['themeMode']);
           >Personal CV (Indonesia) <font-awesome-icon :icon="['fas', 'download']"
         /></a>
         <a
-          href="https://drive.google.com/file/d/1W9jIlxDXaog8HtcSy8Mjmek_C3c_t-sA/view?usp=sharing"
+          href="https://docs.google.com/document/d/1BNTa-t_95G9NZHdmi4bAmc6vJJRLmv9JCdfRDcYgmHc/edit?usp=sharing"
           target="_blank"
           class="p-2 px-4 transition-all duration-200 ease-in-out border-2 rounded-lg shadow-md"
           :class="{
