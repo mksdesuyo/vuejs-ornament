@@ -55,55 +55,60 @@ html {
   color: theme('colors.dark.text');
 }
 
-.glitch {
+/* glitch effect */
+
+.glitch-light {
   position: relative;
-  opacity: 0.85;
-  animation: glitch-skew 1s infinite linear alternate-reverse;
+  display: inline-block;
+  opacity: 0.95;
 }
 
-.glitch::before,
-.glitch::after {
+/* pseudo-element buat potongan teks */
+.glitch-light::before {
   content: attr(data-text);
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
+  color: inherit;
   overflow: hidden;
-  clip: rect(0, 9999px, 0, 0);
+  white-space: nowrap;
+  animation: glitch-slice 3s infinite;
+  opacity: 1;
 }
 
-.glitch::before {
-  left: 2px;
-  text-shadow: -2px 0 #ff0000;
-  animation: glitch-anim 2s infinite linear alternate-reverse;
-}
-
-.glitch::after {
-  left: -2px;
-  text-shadow: -2px 0 #00ffff;
-  animation: glitch-anim2 3s infinite linear alternate-reverse;
-}
-
-@keyframes glitch-anim {
-  0% { clip: rect(20px, 9999px, 25px, 0); }
-  20% { clip: rect(60px, 9999px, 65px, 0); }
-  40% { clip: rect(10px, 9999px, 15px, 0); }
-  60% { clip: rect(40px, 9999px, 45px, 0); }
-  80% { clip: rect(70px, 9999px, 75px, 0); }
-  100% { clip: rect(0, 9999px, 5px, 0); }
-}
-
-@keyframes glitch-anim2 {
-  0% { clip: rect(15px, 9999px, 20px, 0); }
-  20% { clip: rect(50px, 9999px, 55px, 0); }
-  40% { clip: rect(5px, 9999px, 10px, 0); }
-  60% { clip: rect(30px, 9999px, 35px, 0); }
-  80% { clip: rect(65px, 9999px, 70px, 0); }
-  100% { clip: rect(0, 9999px, 5px, 0); }
-}
-
-@keyframes glitch-skew {
-  0% { transform: skew(0deg); }
-  50% { transform: skew(5deg); }
-  100% { transform: skew(-5deg); }
+@keyframes glitch-slice {
+  0% {
+    clip-path: inset(0 0 90% 0);
+  }
+  10% {
+    clip-path: inset(85% 0 0 0);
+  }
+  20% {
+    clip-path: inset(40% 0 40% 0);
+  }
+  30% {
+    clip-path: inset(70% 0 20% 0);
+  }
+  40% {
+    clip-path: inset(10% 0 80% 0);
+  }
+  50% {
+    clip-path: inset(50% 0 30% 0);
+  }
+  60% {
+    clip-path: inset(25% 0 60% 0);
+  }
+  70% {
+    clip-path: inset(60% 0 30% 0);
+  }
+  80% {
+    clip-path: inset(15% 0 75% 0);
+  }
+  90% {
+    clip-path: inset(35% 0 45% 0);
+  }
+  100% {
+    clip-path: inset(0 0 90% 0);
+  }
 }
