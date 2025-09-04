@@ -20,34 +20,30 @@ defineProps(['themeMode']);
     </div>
     <div class="pr-2 overflow-y-auto">
       <p class="text-sm xs:text-base sm:text-lg md:text-xl">
-        Greetings! I'm Rizqi Muhammad Khatami Sandi, a
-        <span class="font-bold">Junior Web Developer</span> certified by BNSP and based in Garut,
-        Indonesia.<br />
-        With a proper foundation in web development, I specialize in creating
-        <span class="font-bold">Front-End</span> solutions using
-        <span class="font-bold">VueJs</span> and developing
-        <span class="font-bold">Back-End</span> systems with <span class="font-bold">Laravel</span>.
+        Hi, <span class="font-bold">I’m Rizqi Muhammad Khatami Sandi</span>—you can call me
+        <span class="font-bold">MKS</span>.
+        <br />
+        I’m a certified <span class="font-bold">Junior Web Developer (BNSP)</span> from Garut,
+        Indonesia, with experience in
+        <span class="font-bold">front-end (Vue.js, Tailwind CSS)</span> and
+        <span class="font-bold">back-end (Laravel, Node.js)</span> development.
         <br />
         <br />
-        Beyond coding, I have deep passion for learning new languages and cultures. I can
-        communicate in <span class="font-bold">English</span> and
-        <span class="font-bold">Japanese</span> at professional and conversational levels, along
-        with some understanding of <span class="font-bold">Arabic</span>. <br />
-        My enthusiasm for personal growth extends to physical activities as well—I enjoy
-        <span class="font-bold">weightlifting and calisthenics</span>,
-        <span class="font-bold">cycling</span>, and <span class="font-bold">swimming</span>, which
-        help me stay positive.
+        Beyond coding, I’ve been fortunate to serve as a <span class="font-bold">mentor</span> and
+        <span class="font-bold">facilitator</span> at Dicoding x Kampus Merdeka and Google Cloud
+        programs, guiding hundreds of learners and helping them complete their journeys
+        successfully.
         <br />
         <br />
-        In addition, I've earned notable certifications including
-        <span class="font-bold">Google IT Support (Coursera)</span> and
-        <span class="font-bold"
-          >AWS Academy Graduate in AWS Cloud Foundations and Cloud Architecting</span
-        >, showcasing my versatility to continous learning.
+        I’m also passionate about
+        <span class="font-bold">languages, self-growth, and culture</span>. I'm a
+        <span class="font-bold">basic professional in Japanese (JLPT N4)</span> and
+        <span class="font-bold">fluent in English (C1)</span>. I like to keep myself active by doing
+        calisthenics, reading, and blogging.
         <br />
         <br />
-        I'm eager to collaborate and bring innovative ideas to life in the ever-evolving tech
-        industry.
+        Currently, I’m eager to learn, collaborate, and grow while building impactful solutions in
+        the tech industry.
       </p>
       <div class="flex flex-wrap gap-2 mt-4 text-xs font-bold xs:text-sm sm:text-base">
         <a
