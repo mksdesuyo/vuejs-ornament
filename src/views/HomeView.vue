@@ -9,7 +9,7 @@ defineProps(['theme-mode']);
     <h1 class="text-3xl font-bold leading-8 tracking-wider xs:text-4xl sm:text-6xl md:text-7xl">
       Rizqi MKS
     </h1>
-    <h2 class="relative font-bold uppercase tracking-wide text-base xs:text-lg sm:text-2xl md:text-3xl glitch-light" data-text="Junior Web Developer | Mentor | Cloud Enthusiast">
+    <h2 class="relative font-bold uppercase tracking-wide text-base xs:text-lg sm:text-2xl md:text-3xl" data-text="Junior Web Developer | Mentor | Cloud Enthusiast">
       Junior Web Developer | Mentor | Cloud Enthusiast
     </h2>
     <p class="mt-1 text-sm xs:text-base sm:text-lg md:text-xl">
