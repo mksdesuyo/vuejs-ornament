@@ -10,7 +10,7 @@
     <li v-for="route in routes" :key="route.name">
       <router-link
         :to="route.path"
-        class="duration-150 ease-in-out max-lg:hover:mr-2 lg:hover:underline"
+        class="duration-150 ease-in-out hover:underline"
         data-discover="true"
         aria-current="page"
         >{{ route.name }}</router-link
@@ -41,6 +41,6 @@ export default {
 
 <style scoped>
 .router-link-active {
-  color: darkgoldenrod;
+  color: rgb(233, 175, 28);
 }
 </style>

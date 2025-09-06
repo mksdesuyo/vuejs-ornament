@@ -12,7 +12,7 @@
       <ul class="flex gap-3 sm:gap-5">
         <li v-for="social in socials" :key="social.icon">
           <a :href="social.link" target="_blank" rel="noreferrer noopener"
-            ><font-awesome-icon
+             :aria-label="social.name"><font-awesome-icon
               :icon="['fab', social.name]"
               class="duration-150 ease-in-out opacity-85 hover:opacity-100"
               :class="social.color"

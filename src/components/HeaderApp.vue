@@ -73,7 +73,7 @@ watch(
             <option value="dark">Dark</option>
           </select>
         </div>
-        <button @click="toggleMenu" id="menuButton" class="grid w-auto xs:mt-1 lg:hidden">
+        <button @click="toggleMenu" id="menuButton" class="grid w-auto xs:mt-1 lg:hidden" aria-label="Navigation menu button">
           <font-awesome-icon
             :icon="isMenuOpen ? ['fas', 'x'] : ['fas', 'bars']"
             class="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5"

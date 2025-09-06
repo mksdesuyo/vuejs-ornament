@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://mks-ornament.vercel.app/sitemap.xml

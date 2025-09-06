@@ -13,7 +13,7 @@ defineProps(['theme-mode']);
       Junior Web Developer | Mentor | Cloud Enthusiast
     </h2>
     <p class="mt-1 text-sm xs:text-base sm:text-lg md:text-xl">
-      A tech-savvy and adaptable web developer based in Garut, Indonesia. Skilled in Front-End (Vue.js, Tailwind) and Back-End (Laravel, Node.js), with experience mentoring 100+ national participants through Kampus Merdeka and Google Cloud programs.
+      A tech-savvy and adaptable web developer based in Garut, Indonesia. Skilled in <span class="font-bold">Front-End (Vue.js, Tailwind)</span> and <span class="font-bold">Back-End (Laravel, Node.js)</span>, with experience mentoring <span class="font-bold">100+</span> national participants through Kampus Merdeka and Google Cloud programs.
     </p>
     <div
       class="flex flex-wrap items-center pb-2 mt-2 text-xs font-bold gap-x-2 gap-y-2 xs:text-sm sm:text-base"
